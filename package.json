@@ -1,0 +1,22 @@
+{
+  "name": "mdboticano",
+  "version": "1.0.0",
+  "description": "Web App Project for UCSD COGS 120 - Intro to HCI (FA16)",
+  "main": "\u001bOD\u001bOC (app.js)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdboticano/progresstracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdboticano/progresstracker/issues"
+  },
+  "homepage": "https://github.com/mdboticano/progresstracker#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
