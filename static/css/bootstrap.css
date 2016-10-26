@@ -5222,7 +5222,7 @@ a.list-group-item.active > .badge,
 
 .jumbotron {
   padding: 30px;
-  
+
   margin-bottom: 30px;
   font-size: 21px;
   font-weight: 200;
@@ -6075,6 +6075,20 @@ button.close {
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
 }
+
+.template-browser
+{
+  padding-top: var(--default-padding);
+  padding-bottom: var(--default-padding);
+  padding-right: 0px;
+  padding-left: 0px;
+  background-color: var(--background-color);
+  /*color: #00f; /*text color*/
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
 
 .tooltip {
   position: absolute;

@@ -182,6 +182,28 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
  * ======================================================================== */
 
 
+
+$(document).ready(function() {
+    var max_fields      = 10; //maximum input boxes allowed
+    var wrapper         = $("#TxtBoxContainer"); //Fields wrapper
+    var add_button      = $("#AddMore"); //Add button ID
+    
+    var x = 0; //initlal text box count
+    $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+         if(x < max_fields){  //max input box allowed
+            $(wrapper).append("+"+ // onkeyup="onInputKeyUp(event)"
+            '<a href="#" rel="nofollow">&nbsp;&nbsp;x</a>'); //add input box
+            x++; //text box increment
+        }
+    });
+    
+    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+        e.preventDefault(); $(this).parent('div').remove(); x--;
+    });
+});
+
+
 +function ($) { "use strict";
 
   // BUTTON PUBLIC CLASS DEFINITION
