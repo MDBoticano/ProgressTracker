@@ -2,12 +2,17 @@
 
 <html>
 <head>
-	<title>Progress Tracker TESTETSETSETSETETESTESTSET</title>	
 	<meta charset="utf-8">
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+	<title>Progress Tracker</title>	
+
 	<!--<link href="css/<CSS FILE NAME>" rel="stylesheet"> add own css here -->
+	<link rel="stylesheet" href = "css/bootstrap">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,7 +23,39 @@
 </head>
 
 <body>
-	<h1>hi</h1>
+
+	<!--navigation-->
+	<section id="home">
+	<nav class ="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<!--collapsing navbar-->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span>
+       				<span class="icon-bar"></span>
+       				<span class="icon-bar"></span> 
+      		</button>
+      	<a class="navbar-brand" href="#">Progress Tracker</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li class="active" data-toggle="collapse" data-target=
+          ".navbar-collapse.in"><a href="#">Home</a></li> (can we get away
+		  with this?) -->
+        <li class="active" data-toggle="collapse" data-target=".navbar-collapse.in">
+		  <a href="#projects-browser">Home</a></li>
+        <li data-toggle="collapse" data-target=".navbar-collapse.in">
+          <a href="aboutme.html">Profile</a></li>
+        <li data-toggle="collapse" data-target=".navbar-collapse.in">
+          <a href="resume.html">Tracker</a></li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+  </section>
+
   
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
