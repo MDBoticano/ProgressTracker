@@ -1,0 +1,344 @@
+:root  /* for storing variables */
+{
+  --default-padding: 50px;
+  --background-color: #efefef;
+}
+
+img
+{
+  background-color: #fff;
+}
+
+.container
+{
+	min-height: 100%;
+}
+
+.container img 
+{ /*limit img size based on container's size */
+  max-height: 80%;
+  max-width: 80%;
+}
+
+.navbar
+{
+  color: #bbb;
+  background-color: #fff;
+}
+
+.navbar a
+{
+  color: #bbb;
+  font-weight: bold;
+  text-transform: uppercase;
+  /*margin-left: 10px;*/
+}
+
+.navbar li
+{
+  display: inline;
+}
+
+/* changes color of active navbar */
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus 
+{
+  background-color: #fff;
+  color: #000;
+}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus 
+{
+    background-color: #FFF; /*hover bg color */
+    color: #F55; /*text hover color */
+}
+
+body 
+{
+  padding-top: var(--default-padding); /*(non)-Default navbar height padding*/
+  height: 100%;
+}
+
+.projects-browser
+{
+  padding-top: var(--default-padding);
+  padding-bottom: var(--default-padding);
+  padding-right: 0px;
+  padding-left: 0px;
+  background-color: var(--background-color);
+  /*color: #00f; /*text color*/
+  text-align: center;
+  text-transform: uppercase;
+  
+}
+
+.projects-browser img:hover /*work on this so it fades white, not to background color */
+{
+  background-color: #000;
+  color: #000;
+  opacity: .7;
+  filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+
+.project1, .project2, .project3
+{
+  padding-top: var(--default-padding);
+  background-color: var(--background-color);
+}
+
+.project1 h4, .project2 h4, .project3 h4
+{
+  text-align: center;
+}
+
+.underConstruction 
+{
+  text-align: center;
+  margin: 30px;
+  
+}
+
+.underConstruction h4
+{
+  text-transform: uppercase;
+}
+
+
+footer
+{
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.pagination{
+  border: 1px solid #ddd;
+}
+
+.pagination>li>a:hover{
+  color: red;
+  background-color: white;
+}
+
+.pagination>li>a {
+  color: grey;
+}
+
+.pagination>li.active>a {
+  color: white;
+  background-color: grey;
+  border: 1px solid #ddd;
+}
+
+.pagination>li.active>a:hover {
+  color: white;
+  background-color: grey;
+  border: 1px solid #ddd;
+}
+
+/* Everything below thanks to startbootstrap templates */
+.header-image {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: url('http://placehold.it/1900x500') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.headline {
+    padding: 120px 0;
+}
+
+.headline h1 {
+    font-size: 130px;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+.headline h2 {
+    font-size: 77px;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+
+.featurette-divider {
+    margin: 80px 0;
+}
+
+.featurette {
+    overflow: hidden;
+}
+
+.featurette-image.pull-left {
+    margin-right: 40px;
+}
+
+.featurette-image.pull-right {
+    margin-left: 40px;
+}
+
+.featurette-heading {
+    font-size: 50px;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+@media(max-width:1200px) {
+  .headline h1 {
+    font-size: 140px;
+  }
+
+  .headline h2 {
+    font-size: 63px;
+  }
+
+  .featurette-divider {
+    margin: 50px 0;
+  }
+
+  .featurette-image.pull-left {
+    margin-right: 20px;
+  }
+
+  .featurette-image.pull-right {
+    margin-left: 20px;
+  }
+
+  .featurette-heading {
+    font-size: 35px;
+  }
+}
+
+@media(max-width:991px) {
+  
+    .container img
+    {
+      max-height: 70%;
+      max-width: 70%;
+    }
+  
+  
+    .headline h1 {
+        font-size: 105px;
+    }
+
+    .headline h2 {
+        font-size: 50px;
+    }
+
+    .featurette-divider {
+        margin: 40px 0;
+    }
+
+    .featurette-image {
+        max-width: 50%;
+    }
+
+    .featurette-image.pull-left {
+        margin-right: 10px;
+    }
+
+    .featurette-image.pull-right {
+        margin-left: 10px;
+    }
+
+    .featurette-heading {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:768px) {
+    .container img 
+    {
+      max-height: 100%;
+      max-width: 100%;
+    }
+    
+    .container {
+        margin: 0 15px;
+    }
+
+    .featurette-divider {
+        margin: 40px 0;
+    }
+
+    .featurette-heading {
+        font-size: 25px;
+    }
+}
+
+@media(max-width:668px) {
+    .container img 
+    {
+      max-height: 110%;
+      max-width: 110%;
+    }
+    
+    
+    .headline h1 {
+        font-size: 70px;
+    }
+
+    .headline h2 {
+        font-size: 32px;
+    }
+
+    .featurette-divider {
+        margin: 30px 0;
+    }
+}
+
+@media(max-width:640px) {
+    .container img 
+    {
+      max-height: 110%;
+      max-width: 110%;
+    }
+     
+    .headline {
+        padding: 75px 0 25px 0;
+    }
+
+    .headline h1 {
+        font-size: 60px;
+    }
+
+    .headline h2 {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:375px) {
+    .featurette-divider {
+        margin: 10px 0;
+    }
+
+    .featurette-image {
+        max-width: 100%;
+    }
+
+    .featurette-image.pull-left {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .featurette-image.pull-right {
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+
+    .templatelink
+    {
+      font-size:25px;
+      text-decoration: none;
+    }
+}
