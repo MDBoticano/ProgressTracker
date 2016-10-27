@@ -4,7 +4,8 @@
   "description": "Web App Project for UCSD COGS 120 - Intro to HCI (FA16)",
   "main": "\u001bOD\u001bOC (app.js)",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,7 @@
   "homepage": "https://github.com/mdboticano/progresstracker#readme",
   "dependencies": {
     "express": "^4.14.0"
-  }
+  },
+  "devDependencies": {},
+  "keywords": []
 }
