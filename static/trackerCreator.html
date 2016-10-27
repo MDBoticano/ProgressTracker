@@ -110,21 +110,39 @@
 			<br>
 			<br>
 
-			<button onclick="trackerConfirm()">Confirm</button>
+			<div>
 
-			<script>
-				function trackerConfirm() {
-				    confirm("Tracker created.");
-				}
-			</script>
+			<!--
+				<button onclick="trackerConfirm()">Confirm</button>
 
-			<button onclick="trackerReset()">Reset</button>
+				<script>
+					function trackerConfirm() {
+					    confirm("Tracker created.");
+					}
+				</script>
 
-			<script>
-				function trackerReset() {
-				    confirm("Tracker has been reset.");
-				}
-			</script>
+				<button onclick="trackerReset()">Reset</button>
+
+				<script>
+					function trackerReset() {
+					    confirm("Tracker has been reset.");
+					}
+				</script>
+
+				CSS reference button
+				<a href="index.html" class="btn btn-default">Go home</a>
+			-->
+
+				<input type="button" onclick="location.href='trackingPage.html';" value="Confirm" />
+
+				<input type="button" onclick="location.href='trackerCreator.html';" value="Reset" />
+
+				<!--
+				<input type="button" onclick="location.href='index.html';" value="Go Home" />
+				-->
+
+			</div>
+
 
   		</form>
   		</center>
