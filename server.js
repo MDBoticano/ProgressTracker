@@ -11,6 +11,7 @@ var PORT = 3000;
 //app.use(express.compress());
 
 app.use(express.static(__dirname + '/static'));
+app.use('/static', express.static(__dirname + '/public'));
 
 var port = process.env.PORT || PORT;
 app.listen(port,function(){
