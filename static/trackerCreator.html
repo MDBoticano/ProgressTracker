@@ -110,8 +110,21 @@
 			<br>
 			<br>
 
-			<input type="submit"  value="Submit">
-			<input type="reset">
+			<button onclick="trackerConfirm()">Confirm</button>
+
+			<script>
+				function trackerConfirm() {
+				    confirm("Tracker created.");
+				}
+			</script>
+
+			<button onclick="trackerReset()">Reset</button>
+
+			<script>
+				function trackerReset() {
+				    confirm("Tracker has been reset.");
+				}
+			</script>
 
   		</form>
   		</center>
