@@ -15,4 +15,4 @@ app.use(express.static(__dirname + '/static'));
 var port = process.env.PORT || PORT;
 app.listen(port,function(){
   console.log('Server running on port %s',port);
-})
+});
