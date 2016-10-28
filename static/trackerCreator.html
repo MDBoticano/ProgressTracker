@@ -133,13 +133,43 @@
 				<a href="index.html" class="btn btn-default">Go home</a>
 			-->
 
+
+				<!-- this works w/o pop up alert-->
 				<input type="button" onclick="location.href='trackingPage.html';" value="Confirm" />
 
 				<input type="button" onclick="location.href='trackerCreator.html';" value="Reset" />
 
-				<!--
-				<input type="button" onclick="location.href='index.html';" value="Go Home" />
-				-->
+
+
+				<!-- gives pop up but does not redirect to page -->
+				<input type="submit" onclick="confirmationPopUp();">
+
+				<script>
+					function confirmationPopUp(){
+						/*
+						var y = confirm("Are these settings correct?")
+						if(y == true)
+						{
+							window.location.href='trackingPage.html';
+						}
+						*/
+
+
+						if(confirm("text here yo"))
+						{
+							window.location.href = "index.html";
+						}
+
+					}
+
+				</script>
+
+
+				<!-- Another block -->
+				<button type="button">
+					<a href="index.html" onclick="return confirm('Are you sure?')" > words </a>
+				</button>
+
 
 			</div>
 
