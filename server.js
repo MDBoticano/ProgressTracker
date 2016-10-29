@@ -1,4 +1,8 @@
 var express = require('express');
+var http = require('http');
+var path = require('path');
+var handlebars = require('express4-handlebars');
+
 var app = express();
 
 var PORT = 3000;
@@ -10,7 +14,7 @@ var PORT = 3000;
 //app.use(express.logger());
 //app.use(express.compress());
 
-app.use(express.static(__dirname + '/static'));
+app.use(express.static(__dirname + '/public'));
 
 var port = process.env.PORT || PORT;
 app.listen(port,function(){
