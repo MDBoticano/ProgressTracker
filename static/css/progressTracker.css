@@ -9,6 +9,13 @@ img
   background-color: #fff;
 }
 
+
+.templates
+{
+  border-style: solid;
+  border-color: #b4b4b4;
+}
+
 .container
 {
 	min-height: 100%;
@@ -63,6 +70,7 @@ body
 
 .projects-browser
 {
+
   padding-top: var(--default-padding);
   padding-bottom: var(--default-padding);
   padding-right: 0px;
@@ -217,10 +225,14 @@ footer {
   }
 }
 
+
+
+
 @media(max-width:991px) {
   
     .container img
     {
+
       max-height: 70%;
       max-width: 70%;
     }
