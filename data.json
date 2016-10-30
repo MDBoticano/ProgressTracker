@@ -1,25 +1,70 @@
 {
+  "location": "UC San Diego",
   "featuredTasks": [
     {
       "title": "Assignment 1",
       "description": "for class",
+      "checkpoints": [
+        { "checkpoint": "cp1"},
+        { "checkpoint": "cp2"}
+      ],
       "tags": [
-        {
-          "tag": "Homework"
-        },
-        {
-          "tag": "COGS 120"
-        }
-      ] 
-    },
+        { "tag": "Homework"},
+        { "tag": "COGS 120"}
+      ],
+      "time": ""
+    },    
     {
-      "title": " ",
-      "description": " ",
+      "title": "Title",
+      "description": "Description",
+      "checkpoints": [
+        { "checkpoint": "cp1"},
+        { "checkpoint": "cp2"}
+      ],
       "tags": [
-        {
-          "tag": " "
-        }
-      ]
+        { "tag": "Tag1"},
+        { "tag": "Tag2"}
+      ],
+      "time": ""
+    },    
+    {
+      "title": "Title",
+      "description": "Description",
+      "checkpoints": [
+        { "checkpoint": "cp1"},
+        { "checkpoint": "cp2"}
+      ],
+      "tags": [
+        { "tag": "Tag1"},
+        { "tag": "Tag2"}
+      ],
+      "time": ""
+    },    
+    {
+      "title": "Title",
+      "description": "Description",
+      "checkpoints": [
+        { "checkpoint": "cp1"},
+        { "checkpoint": "cp2"}
+      ],
+      "tags": [
+        { "tag": "Tag1"},
+        { "tag": "Tag2"}
+      ],
+      "time": ""
+    },    
+    {
+      "title": "Title",
+      "description": "Description",
+      "checkpoints": [
+        { "checkpoint": "cp1"},
+        { "checkpoint": "cp2"}
+      ],
+      "tags": [
+        { "tag": "Tag1"},
+        { "tag": "Tag2"}
+      ],
+      "time": ""
     }    
   ]
 }
