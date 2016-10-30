@@ -72,7 +72,10 @@
       <span class="title">{{title}}</span>
       <br>
       <p>{{description}}</p>
-      <div class="chip">{{Tag}}</div>
+      {{#each tags}}
+        <div class="chip">{{tag}}</div>
+      {{/each}}
+      
       <a href="trackerCreator.html" class="secondary-content">
         <i class="material-icons">add</i>
       </a>

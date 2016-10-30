@@ -5,10 +5,10 @@
       "description": "for class",
       "tags": [
         {
-          "tag1": "Homework"
+          "tag": "Homework"
         },
         {
-          "tag2": "COGS 120"
+          "tag": "COGS 120"
         }
       ] 
     },
@@ -17,7 +17,7 @@
       "description": " ",
       "tags": [
         {
-          "tag1": " "
+          "tag": " "
         }
       ]
     }    
