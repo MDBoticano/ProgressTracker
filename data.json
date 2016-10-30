@@ -1,0 +1,25 @@
+{
+  "featuredTasks": [
+    {
+      "title": "Assignment 1",
+      "description": "for class",
+      "tags": [
+        {
+          "tag1": "Homework"
+        },
+        {
+          "tag2": "COGS 120"
+        }
+      ] 
+    },
+    {
+      "title": " ",
+      "description": " ",
+      "tags": [
+        {
+          "tag1": " "
+        }
+      ]
+    }    
+  ]
+}
