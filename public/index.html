@@ -8,16 +8,12 @@
 	
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<!--<link href="css/<CSS FILE NAME>" rel="stylesheet"> add own css here -->
-	<!--<link rel="stylesheet" href="css/bootstrap.css">-->
-    <!--<link href="css/progressTracker.css" rel="stylesheet" >-->
-
-
     <!-- Materialize Template stuff (Material Design) coding thing-->
-    <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!--our css-->  
+    <!--<link href="css/progressTracker.css" rel="stylesheet" >-->
+    <link href="css/PTmat.css" rel="stylesheet">
   
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,18 +27,20 @@
 
   <!--Materialize cards/collection-->
   <div class="navbar-fixed">
-  <nav>
+  <nav class="teal"> <!--change navbar background color here!-->
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">Progress Tracker</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse">
         <i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="index.html">Home</a></li>
         <li><a href="profilePage.html">Profile</a></li>
         <li><a href="trackingPage.html">Tracker</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="index.html">Home</a></li>
+        <br>
+        <br>
+        <li class="active"><a href="index.html">Home</a></li>
         <li><a href="profilePage.html">Profile</a></li>
         <li><a href="trackingPage.html">Tracker</a></li>
       </ul>
@@ -52,8 +50,26 @@
   </nav>
   </div>  
   
+  <!--location-->
+
+  <div class="col s12 m7">
+    <div class="card">
+      <div class="card-image">
+        <span class="card-title">Card Title</span>
+      </div>
+      <div class="card-content">
+        <h5 class="center-align">UC San Diego</h5>
+        <a href="#!"><h6 class="center-align">Change Location</h6></a>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  
   <!--activities list, make this JSON instead of hardcoded -->
   <ul class="collection">
+        
     <li class="collection-item avatar">
       <i class="material-icons circle ">create</i>
       <span class="title">COGS 109 HW4</span>
@@ -135,6 +151,7 @@
     </li>
   </ul>
   
+  <!--when you hit the bottom of the page, allow room for last item-->
   <br>
   <br>
   <br>
@@ -144,14 +161,13 @@
   <!--floating action button, leads to blank tracker creator  -->
   <div class="fixed-action-btn" style="bottom: 24px; right: 24px;">
     <a class="btn-floating btn-large red" href=trackerCreator.html>
-      <i class="large material-icons">add</i>
+      <i class="large material-icons">create</i>
     </a>
   </div>
    
   
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <!--<script	src="js/<JS FILE NAME>"></script> add own javascript here-->
   <!-- Materialize js-->
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <!-- own js-->

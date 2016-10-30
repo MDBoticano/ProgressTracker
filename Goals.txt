@@ -1,0 +1,36 @@
+Wants/Goals:
+
+Have navbar close if clicking on link of active page (right now it currently relaods it)
+-possibly through js? preventDefault()
+
+
+Have cards expand to reveal more information e.g. steps previews
+-right now the "+" just goes to the (empty) task creator
+-try using JSON to have the links fill the task creator instead of harcoding/going to a blank creator
+
+
+Have better/different icons for task groups/types
+
+
+Implement search bar (functions not for now, but just have it be on right or underneath the navbar); 
+-trying to put it in nav puts it at the center when in mobile mode
+
+
+Update style to fit rest of app (only on index.html right now)
+
+
+Decide if FAB (floating action button) should go straight to create empty, or if there should be other things (e.g. search, favorites)
+
+
+Have people counts underneath each task (Wizard of Oz), with maybe a small description
+-right now it's only the task title
+
+
+What happens if there's hundres of tasks? 
+-have all be loadble? one infinite page or multiple limited pages?
+
+
+Fix CSS/styling on side-navbar
+
+
+Try to move the hamburger menu right just a few pixels
