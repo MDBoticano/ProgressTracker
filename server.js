@@ -9,6 +9,7 @@ var app = express();
 
 
 app.get('/',index.view);
+app.get('/',login.view)
 
 
 
