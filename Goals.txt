@@ -1,5 +1,9 @@
 Wants/Goals:
 
+Login page: be a popup on index file instead, have a boolean for isLoggedIn, stops popup once you've logged in
+
+
+
 Have navbar close if clicking on link of active page (right now it currently relaods it)
 -possibly through js? preventDefault()
 
