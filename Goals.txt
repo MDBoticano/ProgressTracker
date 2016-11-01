@@ -1,5 +1,24 @@
 Wants/Goals:
 
+
+Guide to making a new page:
+save file as .handlebars in views
+go into server.js and add "var <filename> = require('.routes/<filename>');
+while still in server.js, add "app.get('/<filename>/', <filename>.view);
+create a <filename>.js under routes and write 
+
+var data = require('../data.json');
+
+exports.view = function(req, res){
+	//console.log(data); //displays data to console
+	res.render('<filename>',data);
+};
+
+
+
+
+
+
 Login page: be a popup on index file instead, have a boolean for isLoggedIn, stops popup once you've logged in
 
 
