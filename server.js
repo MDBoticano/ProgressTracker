@@ -3,12 +3,15 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
 
+//Pages
 var index = require('./routes/index');
+var profilePage = require('./routes/profilePage');
 
 var app = express();
 
-
+//Routes
 app.get('/',index.view);
+app.get('/profilePage', profilePage.view);
 
 
 
