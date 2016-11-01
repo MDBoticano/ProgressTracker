@@ -11,7 +11,11 @@ var app = express();
 
 //Routes
 app.get('/',index.view);
+<<<<<<< HEAD
 app.get('/profilePage', profilePage.view);
+=======
+app.get('/',login.view);
+>>>>>>> 074aab3f287936c8053394b97116d968e6f86b6a
 
 
 
