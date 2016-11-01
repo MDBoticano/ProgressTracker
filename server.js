@@ -7,7 +7,8 @@ var handlebars = require('express3-handlebars');
 var index = require('./routes/index');
 var profilePage = require('./routes/profilePage');
 var login = require('./routes/login');
-var trackerCreator = require('./routes/trackerCreator')
+var trackerCreator = require('./routes/trackerCreator');
+var dummyClock = require('./routes/dummyClock');
 
 var app = express();
 
@@ -15,7 +16,8 @@ var app = express();
 app.get('/',index.view);
 app.get('/profilePage', profilePage.view);
 app.get('/login',login.view);
-app.get('/trackerCreator', trackerCreator.view)
+app.get('/trackerCreator', trackerCreator.view);
+app.get('/dummyClock', dummyClock.view);
 
 
 
