@@ -10,9 +10,8 @@
     { "link": "/login",
       "linkText": "Log In"},
     { "link": "/dummyClock",
-      "linkText": "TEST"},
-    { "link": "/signup",
-      "linkText": "Sign Up"}
+      "linkText": "TEST"}
+    
 
     
   ],
