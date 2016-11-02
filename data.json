@@ -1,5 +1,19 @@
 {
   "location": "UC San Diego",
+  "navLinks": [
+    { "link": "/",
+      "linkText": "Home"},
+    { "link": "/profilePage",
+      "linkText": "Profile"},    
+    { "link": "/trackerCreator",
+      "linkText": "Tracker"},
+    { "link": "/login",
+      "linkText": "Login"},
+    { "link": "/dummyClock",
+      "linkText": "TEST"}
+
+    
+  ],
   "featuredTasks": [
     {
       "title": "Assignment 1",

@@ -25,37 +25,25 @@
 
 <body>
 
-  <!--Materialize cards/collection-->
+  <!--Materialize Navbar Code-->
   <div class="navbar-fixed">
   <nav class="teal"> <!--change navbar background color here!-->
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">Progress Tracker</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse">
         <i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li class="active"><a href="/">Home</a></li>
-        <li><a href="/profilePage">Profile</a></li>
-        <li><a href="trackingPage.html">Tracker</a></li>
-
-        <!-- Test links -->
-        <li><a href="/login"> Log In</a></li>
-        <li><a href="/dummyClock"> dummy clock</a></li>
-      
+      <ul class="right hide-on-med-and-down"> <!-- full web page -->
+        {{#each navLinks}}
+          <li><a href="{{link}}">{{linkText}}</a></li>
+        {{/each}}
       </ul>
-      <ul class="side-nav" id="mobile-demo">
+      <ul class="side-nav" id="mobile-demo"> <!-- mobile -->
         <br>
         <br>
-        <li class="active"><a href="/">Home</a></li>
-        <li><a href="/profilePage">Profile</a></li>
-        <li><a href="trackingPage.html">Tracker</a></li>
-
-        <!-- Test links -->
-        <li><a href="/login">Log In</a></li>
-        <li><a href="/dummyClock"> dummy clock</a></li>
-
+        {{#each navLinks}}
+          <li><a href="{{link}}">{{linkText}}</a></li>
+        {{/each}}
       </ul>
-      
-      
     </div>
   </nav>
   </div>  
