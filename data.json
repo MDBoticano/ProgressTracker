@@ -8,9 +8,11 @@
     { "link": "/trackerCreator",
       "linkText": "Tracker"},
     { "link": "/login",
-      "linkText": "Logout"},
+      "linkText": "Log In"},
     { "link": "/dummyClock",
-      "linkText": "TEST"}
+      "linkText": "TEST"},
+    { "link": "/signup",
+      "linkText": "Sign Up"}
 
     
   ],
