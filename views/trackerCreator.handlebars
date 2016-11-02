@@ -65,49 +65,56 @@
   </div>
 
   <section>
-  	<div>
-  		<center>
-  		<form>
+ <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input  id="tracker_name" type="text" class="validate">
+          <label for="tracker_name">Tracker Name</label>
+        </div>
+      </div>
+      <div class="row">
+
+      
+        
+        <div class="input-field col s6"> 
+          <input id="checkpoint_1" type="text" class="validate" name="mytext[]">
+          <label class="active" for="checkpoint_1">Checkpoint</label>
+       
+          <button class="add_field_button" onClick="">Add Checkpoint</button>
+        
+         </div>
+      </div>
+
+      <div class="empty">
+
+      </div>
+      
+   
+    </form>
+  </div>
+  </section>
+
+
+
+
+
+ 
 			
-			<div>
-
-				Please select a time limit:
-				<select class="0-12"></select> hours
-				<select class="0-60"></select> minutes
-
-			</div>
-
-
-			<br>
-			<br>
 
 			<!-- GO TO THIS LINK FOR FORM FIELDS
 		!!!!!!!!!
 		!!!!
 
-		https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery
+		https://www..com/2013/03/addremove-input-fields-dynamically-with-jquerysanwebe
 		
 		I added stuff to bootstrap.js but idk how it works or if it works pls check
 		!!!!
 		!!!!!!!!!
 		-->
 			<!-- I copied this  -->
-	  		<div class="input_fields_wrap">
-
-	   		 <button class="add_field_button">Add Checkpoint</button>
-	   		 <br>
-
-	    		<div>
-	    		<input type="text" name="Add field">
-	    		</div>
+	  
 			
-			</div>  
-
-			<br>
-			<br>
-
-			<div>
-
 			<!--
 				<button onclick="trackerConfirm()">Confirm</button>
 
@@ -131,9 +138,7 @@
 
 
 				<!-- this works w/o pop up alert-->
-				<input type="button" onclick="location.href='trackingPage.html';" value="Confirm" />
-
-				<input type="button" onclick="location.href='trackerCreator.html';" value="Reset" />
+				
 
 
 				
@@ -169,11 +174,7 @@
 				-->
 
 
-			</div>
-
-
-  		</form>
-  		</center>
+	
 
   		
 
@@ -205,6 +206,7 @@
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <!-- own js-->
   <script src="js/progressTracker.js"></script>
+  <script src="js/creatorFunction.js"></script>
 </body>
 
 
