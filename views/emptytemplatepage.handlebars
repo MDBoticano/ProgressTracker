@@ -24,8 +24,29 @@
 
 <body>
 
-    <!--navigation-->
-    
+
+  <!--Materialize Navbar Code-->
+  <div class="navbar-fixed">
+  <nav class="teal"> <!--change navbar background color here!-->
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Progress Tracker</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse">
+        <i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down"> <!-- full web page -->
+        {{#each navLinks}}
+          <li><a href="{{link}}">{{linkText}}</a></li>
+        {{/each}}
+      </ul>
+      <ul class="side-nav" id="mobile-demo"> <!-- mobile -->
+        <br>
+        <br>
+        {{#each navLinks}}
+          <li><a href="{{link}}">{{linkText}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+  </nav>
+  </div>  
 
     <!-- Javascripts -->
     <script src="https://code.jquery.com/jquery.js"></script>
