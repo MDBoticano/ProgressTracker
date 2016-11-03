@@ -8,10 +8,7 @@
     { "link": "/trackerCreator",
       "linkText": "Tracker"},
     { "link": "/login",
-      "linkText": "Log Out"}
-    
-
-    
+      "linkText": "Log Out"}    
   ],
 
   
