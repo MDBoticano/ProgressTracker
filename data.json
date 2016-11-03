@@ -17,6 +17,7 @@
   
   "featuredTasks": [
     {
+      "icon": "",
       "title": "Assignment 1",
       "description": "for class",
       "checkpoints": [
@@ -30,6 +31,7 @@
       "time": ""
     },    
     {
+      "icon": "",
       "title": "Title",
       "description": "Description",
       "checkpoints": [
@@ -43,6 +45,7 @@
       "time": ""
     },    
     {
+      "icon": "",    
       "title": "Title",
       "description": "Description",
       "checkpoints": [
@@ -56,6 +59,7 @@
       "time": ""
     },    
     {
+      "icon": "",
       "title": "Title",
       "description": "Description",
       "checkpoints": [
@@ -69,6 +73,7 @@
       "time": ""
     },    
     {
+      "icon": "",
       "title": "Title",
       "description": "Description",
       "checkpoints": [
