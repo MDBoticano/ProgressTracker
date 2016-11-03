@@ -53,16 +53,14 @@
 
 
 <!-- profile-page-header -->
-  <div id="profile-page-header" class="card">
-                
+  <div id="profile-page-header" class="card">          
       <div class="card-content">
         <div class="row">                    
           <div class="col s12">     
             <center>                 
-              
-                <font size="6">User Name</font>
+                <font size="5">User Name</font>
                 <br>
-                <font size="4">FirstName LastName</font>
+                <font size="2">FirstName LastName</font>
                 
                 <figure class="card-profile-image">
                   <img src="./images/profilepic.png" width="100" height="100"  class="circle responsive-img activator">
@@ -70,67 +68,53 @@
 
                 <div>
                   <i class="material-icons">assignment</i>120 Tasks Completed
-                  
                   <br>
                   <br>
-
                   <input onclick="addfriend()" class="btn waves-effect waves-light" type="button" value="Add friend" id="addFriendButton">
-
                 </div>
-              
             </center>                        
           </div>               
-          
         </div>
       </div>
-      
   </div>
+
+
+  <!-- Tracker history cards -->
+  <div>
+    <ul class="collection">
+    {{#each featuredTasks}}
+      <li class="collection-item avatar">
+        <i class="material-icons circle">assignment_turned_in</i>
+          <span class="title">{{title}}</span>
+          <br>
+          <p>{{description}}</p>
+          {{#each tags}}
+            <div class="chip">{{tag}}</div>
+          {{/each}}
+          
+          <a class='dropdown-button' href='/' data-activates='dropdown1'><i class="material-icons right">more_vert</i></a>
+
+          <!-- Dropdown Structure -->
+          <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="/">View details</a></li>
+            <li class="divider"></li>
+            <li><a href="/">Redo task</a></li>
+            <li class="divider"></li>
+            <li><a href="/">Share</a></li>
+          </ul>
+          
+
+      </li>
+    {{/each}}
+    </ul>
+  </div>
+
+
+
+  <center>
+  <div class="chip">Show more</div>
+  </center>
            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Jumbotron header 
-  <div class="jumbotron">
-      <h1><center>Progress Tracker</center></h1>
-      <center>
-        <p>Page not complete. Page will show user data and information once data is made.</p>
-      </center>
-  </div>
-  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
