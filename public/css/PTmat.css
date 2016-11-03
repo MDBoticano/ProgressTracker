@@ -1,3 +1,9 @@
-nav {
-  //background-color: slategrey;
+.collection .CPactive {
+    color: black; 
+    background-color: yellow; 
+}
+
+.collection .CPdone {
+    color: black;
+    background-color: green;
 }
