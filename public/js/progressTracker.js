@@ -1,6 +1,16 @@
  $(document).ready(function(){  
      $(".button-collapse").sideNav(); //materialize navbar
       
+     
+     $("#CPstart").click(function(){
+        console.log("Clicked!"); 
+                  
+         //remove class CPactive on current, and add CPdone
+         
+         //Add class CPactive to next on list,
+         
+
+     });
  });  
 
 //Add friend button
