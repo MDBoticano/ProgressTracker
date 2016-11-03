@@ -8,8 +8,8 @@
     { "link": "/trackerCreator",
       "linkText": "Tracker"},
     { "link": "/login",
-      "linkText": "Log Out"},
-    /*{ "link": "/dummyClock",
+      "linkText": "Log Out"} /*
+    { "link": "/dummyClock",
       "linkText": "TEST"} */
     
 
