@@ -1,10 +1,8 @@
-
-  
-    
-    
  $(document).ready(function(){  
-      $(".button-collapse").sideNav();
-      var i=1;  
+     $(".button-collapse").sideNav(); //materialize navbar
+      
+     //checkpoint add
+     var i=1;  
       $('#add').click(function(){  
            i++;  
            $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="name[]" placeholder="Enter checkpoint" class="form-control checkpoint_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
@@ -20,20 +18,21 @@
                 data:$('#add_checkpoint').serialize(),  
                 success:function(data)  
                 {  
-                     alert(data);  
-                     $('#add_checkpoint')[0].reset();  
+                 alert(data);  
+                 $('#add_checkpoint')[0].reset();  
                 }  
            });  
       });  
  });  
 
+//Add friend button
 function addfriend() // no ';' here
 {
     var elem = document.getElementById("addFriendButton");
     elem.type = "button";
     if (elem.value=="Add friend") 
-    	{
-    		elem.value = "Added";
-    	}
+        {
+            elem.value = "Added";
+        }
     else elem.value = "Add friend";
 };
