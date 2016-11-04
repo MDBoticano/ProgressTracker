@@ -8,6 +8,8 @@ $(document).ready(function(){
     var selector = "#item_"+ i;
     var done = "#item_"+ x;   
      
+  
+    var timeTotal = 0;
      $("#CPstart").click(function(){
        console.log(x , i+1);
        //Changes "Start" text to "Checkpoint"
@@ -22,6 +24,9 @@ $(document).ready(function(){
        
        //Change the text to hint at home
        if(i == max_cp+1){
+        var timeToComplete = (secondsTimeSpanToHMS(timeTotal));
+        var timeTotalString = '<center><li class="collection-item" id ="item_total">'+timeToComplete+'</li></center>';
+        $("#checkpoints").append(timeTotalString) 
         $(this).html("Home");
        }
        
@@ -30,10 +35,15 @@ $(document).ready(function(){
         $(this).attr("href", "/");
        }
        
-       var randTime = Math.floor((Math.random()*90)+90);
-       var timeToComplete = (secondsTimeSpanToHMS(randTime));
-       var TTCstring = " - " + timeToComplete;
+       if(i > 1 && 1 <= max_cp+1) {
+         var randTime = Math.floor((Math.random()*90)+90);
+         var timeToComplete = (secondsTimeSpanToHMS(randTime));
+         var TTCstring = " - " + timeToComplete;
        
+       timeTotal += randTime;
+       console.log(secondsTimeSpanToHMS(timeTotal));
+       }
+              
        if(i <= max_cp+1){
         console.log("Clicked!"); 
         $(selector).addClass("CPactive");
