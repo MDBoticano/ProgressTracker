@@ -7,3 +7,11 @@
     color: black;
     background-color: green;
 }
+
+.featDesc {
+    white-space: nowrap;
+    width: 90%;                   
+    overflow: hidden;             
+    -o-text-overflow: ellipsis;    
+    text-overflow:    ellipsis;   
+}
