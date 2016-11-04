@@ -8,16 +8,27 @@
         var done = "#item_"+ x;   
      
      $("#CPstart").click(function(){
+        
+
         console.log("Clicked!"); 
         //var selector = "#item_"+i;
       
-        if(i <= max_cp){     
+        //while(i <= max_cp){     
          //remove class CPactive on current, and add CPdone
-            i++;
-           // $(done).removeClass("CPactive");
+            
+        //$(done).removeClass("CPactive");
             //$(done).addClass("CPdone");
             $(selector).addClass("CPactive");
-            console.log("add success");
+            $(done).toggleClass("CPactive").addClass("CPdone");
+            console.log(selector);
+            //console.log("add success");
+            selector = "#item_"+ i;
+            done = "#item_"+ x;
+            //done = "#item_"+x;
+
+            x++;
+            i++;
+            //$(selector + 1).addClass("CPactive");
         //$("#item_1").css("background-color", "yellow"); 
         //console.log("yellow!");
             //$(selector).removeClass("CPactive");
@@ -26,7 +37,7 @@
 
          console.log("remove success");
          //Add class CPactive to next on list,
-         }
+         //}
 
      });
  });  
