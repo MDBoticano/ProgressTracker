@@ -35,6 +35,7 @@ $(document).ready(function(){
         console.log("Clicked!"); 
         $(selector).addClass("CPactive");
         $(done).toggleClass("CPactive").addClass("CPdone");
+        $(done).append(" - 1:47"); 
         console.log(selector);
 
         i++;
