@@ -6,7 +6,10 @@
         console.log("Clicked!"); 
                   
          //remove class CPactive on current, and add CPdone
-         
+        $(".CPactive").addClass("CPdone");
+         console.log("add success");
+        $(".CPdone").removeClass("CPactive");
+         console.log("remove success");
          //Add class CPactive to next on list,
          
 

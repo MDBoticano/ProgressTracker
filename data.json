@@ -68,7 +68,23 @@
         { "tag": "Tag2"}
       ],
       "time": ""
-    },    
+    },
+    {
+      "icon": "",
+      "title": "One Mile Run",
+      "description": "Travel a mile by walking, running, jogging or however you like.",
+      "checkpoints": [
+        { "checkpoint": "0.25 mi"},
+        { "checkpoint": "0.50 mi"},
+        { "checkpoint": "0.75 mi"},
+        { "checkpoint": "1.00 mi"}
+      ],
+      "tags": [
+        { "tag": "Fitness"},
+        { "tag": "Running"}
+      ],
+      "time": ""
+    },  
     {
       "icon": "",
       "title": "Title",

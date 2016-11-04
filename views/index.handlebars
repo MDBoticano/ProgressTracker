@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   <!--our css-->  
+  <link rel="stylesheet" href="css/PTmat.css"/>
     
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -61,13 +62,13 @@
   </div>
 
   <!--activities list -->
-  <ul class="collection">
+  <ul class="collection featTasks">
     {{#each featuredTasks}}
-    <li class="collection-item avatar">
+    <li class="collection-item avatar featTasks">
       <i class="material-icons circle">{{icon}}</i>
       <span class="title">{{title}}</span>
       <br>
-      <p>{{description}}</p>
+      <p class="featDesc">{{description}}</p>
       {{#each tags}}
         <div class="chip">{{tag}}</div>
       {{/each}}
