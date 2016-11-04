@@ -13,7 +13,22 @@
 
   
   "featuredTasks": [
-    {
+    {     
+      "icon": "",
+      "title": "COMPANY PRODUCT TM",
+      "description": "Sponsored task for monetization",
+      "checkpoints": [
+        { "checkpoint": "Make Money"},
+        { "checkpoint": "Save Money"},
+        { "checkpoint": "Spend Money"}
+      ],
+      "tags": [
+        { "tag": "$$$"},
+        { "tag": "Money"}
+      ],
+      "time": ""
+    },
+    {     
       "icon": "",
       "title": "COGS 120 Assignment 1",
       "description": "Conduct needfinding interviews",
@@ -30,8 +45,8 @@
     },    
     {
       "icon": "",
-      "title": "Assignment 2",
-      "description": "",
+      "title": "COGS 120 Assignment 2",
+      "description": "Storyboard and paper prototype",
       "checkpoints": [
         { "checkpoint": "cp1"},
         { "checkpoint": "cp2"}
@@ -44,8 +59,8 @@
     },    
     {
       "icon": "",    
-      "title": "Assignment 3",
-      "description": "",
+      "title": "COGS 120 Assignment 3",
+      "description": "Paper Prototypes",
       "checkpoints": [
         { "checkpoint": "cp1"},
         { "checkpoint": "cp2"}
@@ -58,15 +73,17 @@
     },    
     {
       "icon": "",
-      "title": "Title",
-      "description": "Description",
+      "title": "Cook Rice",
+      "description": "A necessary meal",
       "checkpoints": [
-        { "checkpoint": "cp1"},
-        { "checkpoint": "cp2"}
+        { "checkpoint": "For every person eating, add one cup"},
+        { "checkpoint": "Rinse the rice"},
+        { "checkpoint": "Add water"},
+        { "checkpoint": "Push button down"}
       ],
       "tags": [
-        { "tag": "Tag1"},
-        { "tag": "Tag2"}
+        { "tag": "Food"},
+        { "tag": "Cooking"}
       ],
       "time": ""
     },
@@ -82,21 +99,24 @@
       ],
       "tags": [
         { "tag": "Fitness"},
-        { "tag": "Running"}
+        { "tag": "Running"},
+        { "tag": "Jogging"},
+        { "tag": "Cardio"}
       ],
       "time": ""
     },  
     {
       "icon": "",
-      "title": "Title",
-      "description": "Description",
+      "title": "COGS 120 Midterm",
+      "description": "Study guide",
       "checkpoints": [
-        { "checkpoint": "cp1"},
-        { "checkpoint": "cp2"}
+        { "checkpoint": "Read slides"},
+        { "checkpoint": "Do lab"}
       ],
       "tags": [
-        { "tag": "Tag1"},
-        { "tag": "Tag2"}
+        { "tag": "Study"},
+        { "tag": "Tests"},
+        { "tag": "homework"}
       ],
       "time": ""
     }    
