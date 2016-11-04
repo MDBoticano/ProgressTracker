@@ -15,6 +15,7 @@
       
       <!--our css-->  
       
+
       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
       <!--[if lt IE 9]>
@@ -96,17 +97,34 @@
           {{#each tags}}
             <div class="chip">{{tag}}</div>
           {{/each}}
-          
-          <!-- <a class='dropdown-button' href='/' data-activates='dropdown1'><i class="material-icons right">more_vert</i></a>
+        
+        
+      <a href="/trackerCreator" class="secondary-content">
+        <i class="material-icons">refresh</i>
+      </a>
+      
 
-          <!-- Dropdown Structure -->
-          <!-- <ul id='dropdown1' class='dropdown-content'>
-            <li><a href="/">View details</a></li>
-            <li class="divider"></li>
-            <li><a href="/">Redo task</a></li>
-            <li class="divider"></li>
-            <li><a href="/">Share</a></li>
-          </ul> -->
+
+      <!--
+      <div class="secondary-content">
+      
+        Dropdown Trigger 
+        <a class='dropdown-button' href='#' data-beloworigin="true" data-activates='dropdown1'>
+          <i class="material-icons">more_vert</i>
+        </a>
+
+        Dropdown Structure
+        <ul id='dropdown1' class='dropdown-content'>
+          <li><a href="/trackerCreator">View Details</a></li>
+          <li class="divider"></li>
+          <li><a href="/trackerCreator">Redo</a></li>
+          <li class="divider"></li>
+          <li><a href="/trackerCreator">Share</a></li>
+        </ul>
+
+      </div>
+
+      -->
           
 
       </li>
@@ -114,14 +132,12 @@
     </ul>
   </div>
 
-
-
+  <br>
   <center>
   <div class="chip">Show more</div>
   </center>
+  <br>
            
-
-
 
   <!-- Javascripts -->
   <script src="https://code.jquery.com/jquery.js"></script>
