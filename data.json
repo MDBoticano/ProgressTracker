@@ -15,8 +15,23 @@
   "featuredTasks": [
     {
       "icon": "",
-      "title": "Assignment 1",
-      "description": "for class",
+      "title": "COGS 120 Assignment 1",
+      "description": "Conduct needfinding interviews",
+      "checkpoints": [
+        { "checkpoint": "Interview 1"},
+        { "checkpoint": "Interview 2"},
+        { "checkpoint": "Interview 3"}
+      ],
+      "tags": [
+        { "tag": "Homework"},
+        { "tag": "COGS 120"}
+      ],
+      "time": ""
+    },    
+    {
+      "icon": "",
+      "title": "Assignment 2",
+      "description": "",
       "checkpoints": [
         { "checkpoint": "cp1"},
         { "checkpoint": "cp2"}
@@ -28,30 +43,16 @@
       "time": ""
     },    
     {
-      "icon": "",
-      "title": "Title",
-      "description": "Description",
-      "checkpoints": [
-        { "checkpoint": "cp1"},
-        { "checkpoint": "cp2"}
-      ],
-      "tags": [
-        { "tag": "Tag1"},
-        { "tag": "Tag2"}
-      ],
-      "time": ""
-    },    
-    {
       "icon": "",    
-      "title": "Title",
-      "description": "Description",
+      "title": "Assignment 3",
+      "description": "",
       "checkpoints": [
         { "checkpoint": "cp1"},
         { "checkpoint": "cp2"}
       ],
       "tags": [
-        { "tag": "Tag1"},
-        { "tag": "Tag2"}
+        { "tag": "Homework"},
+        { "tag": "COGS 120"}
       ],
       "time": ""
     },    
