@@ -1,17 +1,32 @@
  $(document).ready(function(){  
      $(".button-collapse").sideNav(); //materialize navbar
       
+        var max_cp = 4;
+        var i = 1;
+        var x = i-1;
+        var selector = "#item_"+ i;
+        var done = "#item_"+ x;   
      
      $("#CPstart").click(function(){
         console.log("Clicked!"); 
-                  
+        //var selector = "#item_"+i;
+      
+        if(i <= max_cp){     
          //remove class CPactive on current, and add CPdone
-        $(".CPactive").addClass("CPdone");
-         console.log("add success");
-        $(".CPdone").removeClass("CPactive");
+            i++;
+           // $(done).removeClass("CPactive");
+            //$(done).addClass("CPdone");
+            $(selector).addClass("CPactive");
+            console.log("add success");
+        //$("#item_1").css("background-color", "yellow"); 
+        //console.log("yellow!");
+            //$(selector).removeClass("CPactive");
+        
+         
+
          console.log("remove success");
          //Add class CPactive to next on list,
-         
+         }
 
      });
  });  
