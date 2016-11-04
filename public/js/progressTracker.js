@@ -30,12 +30,15 @@ $(document).ready(function(){
         $(this).attr("href", "/");
        }
        
+       var randTime = Math.floor((Math.random()*90)+90);
+       var timeToComplete = (secondsTimeSpanToHMS(randTime));
+       var TTCstring = " - " + timeToComplete;
        
        if(i <= max_cp+1){
         console.log("Clicked!"); 
         $(selector).addClass("CPactive");
         $(done).toggleClass("CPactive").addClass("CPdone");
-        $(done).append(" - 1:47"); 
+        $(done).append(TTCstring); 
         console.log(selector);
 
         i++;
@@ -59,3 +62,12 @@ function addfriend() // no ';' here
         }
     else elem.value = "Add friend";
 };
+
+//Time format converter
+function secondsTimeSpanToHMS(s) {
+    var h = Math.floor(s/3600); //Get whole hours
+    s -= h*3600;
+    var m = Math.floor(s/60); //Get remaining minutes
+    s -= m*60;
+    return h+":"+(m < 10 ? '0'+m : m)+":"+(s < 10 ? '0'+s : s); //zero padding on minutes and seconds
+}
