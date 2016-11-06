@@ -1,13 +1,15 @@
 $(document).ready(function(){  
   
+    initializePage();
     //CLEAN THIS UP, PUT THESE FUNCTIONS INTO THEIR OWN ONES (initializePage)
     //!!!PLEASE READ ABOVE!!!//
   
-    $(".button-collapse").sideNav(); //materialize navbar
+    
       
     //Highlight Active collection
-    var max_cp = 4; //should count # of objects in the collection with checkpoint class
-    var i = 1;
+    var max_cp = $(".collection-item").length; //should count # of objects in the collection with checkpoint class
+    console.log(max_cp);
+    var i = 0;
     var x = i-1;
     var selector = "#item_"+ i;
     var done = "#item_"+ x;   
@@ -15,37 +17,37 @@ $(document).ready(function(){
   
     var timeTotal = 0;
      $("#CPstart").click(function(){
-       console.log(x , i+1);
+       //console.log(x , i+1);
        //Changes "Start" text to "Checkpoint"
        if(i == 1){
          $(this).html("Checkpoint");
        }
        
        //Change the text when apporaching the final checkpoint
-       if(i == max_cp){
+       if(i == max_cp-1){
          $(this).html("Finish");
        }
        
        //Change the text to hint at home
-       if(i == max_cp+1){
+       if(i == max_cp){
         var timeToComplete = (secondsTimeSpanToHMS(timeTotal));
         var timeTotalString = '<center><li class="collection-item" id ="item_total">'+timeToComplete+'</li></center>';
         $("#checkpoints").append(timeTotalString) 
         $(this).html("Home");
        }
        
-       //Set the link so it goes home
-       if(i == max_cp+2){
-        $(this).attr("href", "/");
+       //Set the link so it goes home; change this to link to statistics or profile page or whatever else
+       if(i == max_cp+1){
+        $(this).attr("href", "/"); 
        }
        
-       if(i > 1 && 1 <= max_cp+1) {
+       if(i > 0 && 1 <= max_cp+1) {
          var randTime = Math.floor((Math.random()*90)+90);
          var timeToComplete = (secondsTimeSpanToHMS(randTime));
          var TTCstring = " - " + timeToComplete;
        
        timeTotal += randTime;
-       console.log(secondsTimeSpanToHMS(timeTotal));
+       //console.log(secondsTimeSpanToHMS(timeTotal));
        }
               
        if(i <= max_cp+1){
@@ -65,6 +67,16 @@ $(document).ready(function(){
      });
  });  
 
+
+//Called when document ready
+function initializePage() {
+  $(".button-collapse").sideNav(); //materialize navbar
+  
+}
+
+//
+
+
 //Add friend button
 function addfriend() // no ';' here
 {
@@ -75,7 +87,7 @@ function addfriend() // no ';' here
             elem.value = "Added";
         }
     else elem.value = "Add friend";
-};
+}
 
 //Time format converter, copied directly from stackoverflow 
 function secondsTimeSpanToHMS(s) {

@@ -66,8 +66,7 @@
     </div>
     </div>    
     <br>
-   
-      
+        
       
         
     <!-- button for lapping/changing active checkpoint -->
@@ -75,12 +74,14 @@
     <br>
     <br>
         
-    <center><div class="row"> 
+    <center>
+    <div class="row"> 
         <!-- tags -->
-        <div class="chip">Fitness</div>
-        <div class="chip">Running</div>
+        {{#each task.tags}}
+        <div class="chip">{{tag}}</div>
+        {{/each}}
     </div>      
-    </div></center>
+    </center>
 
     <!-- Javascripts -->
     <script src="https://code.jquery.com/jquery.js"></script>
