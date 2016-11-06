@@ -10,7 +10,15 @@
     { "link": "/login",
       "linkText": "Log Out"}    
   ],
-
+  "taskURLtoID": {
+    "COMPANY PRODUCT TM": 1,
+    "COGS 120 Assignment 1": 2,
+    "COGS 120 Assignment 2": 3,
+    "COGS 120 Assignment 3": 4,
+    "Cook Rice": 5,
+    "One Mile Run": 6,
+    "COGS 120 Midterm": 7
+  },
   
   "featuredTasks": [
     {     
