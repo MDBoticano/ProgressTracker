@@ -48,8 +48,9 @@ function highlightCP(){
        var randTime = Math.floor((Math.random()*90)+90);
        var timeToComplete = (secondsTimeSpanToHMS(randTime));
        var TTCstring = " - " + timeToComplete;
+
        timeTotal += randTime;
-     //console.log(secondsTimeSpanToHMS(timeTotal));
+     console.log(secondsTimeSpanToHMS(timeTotal));
      }     
      if(i <= max_cp+1){
       //console.log("Clicked!"); 
