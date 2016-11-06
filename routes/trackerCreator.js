@@ -18,7 +18,7 @@ exports.generate = function(req, res){
   task = data.featuredTasks[taskID-1]; //Grabs the data in data array
   console.log(task);
   
-  var newData = [location, navLinks, task];
+  var newData = {location, navLinks, task};
   console.log(newData);
   res.render('trackerCreator', newData);
 };
