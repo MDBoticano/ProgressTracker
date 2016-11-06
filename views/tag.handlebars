@@ -46,6 +46,48 @@
     </div>
   </nav>
   </div>  
+  
+  
+  <!--location-->
+
+  <div class="col s12 m7">
+    <div class="card">
+      <div class="card-image">
+        <span class="card-title">Card Title</span>
+      </div>
+      <div class="card-content">
+        <h5 class="center-align">{{location}}</h5>
+        <a href="#!"><h6 class="center-align">Change Location</h6></a>
+      </div>
+    </div>
+  </div>
+
+  <!--activities list -->
+  <ul class="collection featTasks">
+    {{#each featuredTasks}}
+    <li class="collection-item avatar featTasks">
+      <!--<i class="material-icons circle">{{icon}}</i>-->
+      <span class="title">{{title}}</span>
+      <br>
+      <p class="featDesc">{{description}}</p>
+      {{#each tags}}
+        <a href="/tag/{{tag}}">
+        <div class="chip">{{tag}}</div>
+        </a>
+      {{/each}}
+      
+      <a href="/trackerCreator/{{id}}" class="secondary-content">
+        <i class="material-icons">add</i>
+      </a>
+    </li>
+    {{/each}}
+  </ul>
+  
+  <!--when you hit the bottom of the page, allow room for last item-->
+  <br>
+  <br>
+  <br>
+  <br>
 
     <!-- Javascripts -->
     <script src="https://code.jquery.com/jquery.js"></script>

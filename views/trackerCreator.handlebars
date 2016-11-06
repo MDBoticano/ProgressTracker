@@ -78,7 +78,9 @@
     <div class="row"> 
         <!-- tags -->
         {{#each task.tags}}
-        <div class="chip">{{tag}}</div>
+          <a href="/tag/{{tag}}">
+          <div class="chip">{{tag}}</div>
+          </a>
         {{/each}}
     </div>      
     </center>

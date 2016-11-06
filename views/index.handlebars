@@ -65,12 +65,14 @@
   <ul class="collection featTasks">
     {{#each featuredTasks}}
     <li class="collection-item avatar featTasks">
-      <i class="material-icons circle">{{icon}}</i>
+      <!--<i class="material-icons circle">{{icon}}</i>-->
       <span class="title">{{title}}</span>
       <br>
       <p class="featDesc">{{description}}</p>
       {{#each tags}}
+        <a href="/tag/{{tag}}">
         <div class="chip">{{tag}}</div>
+        </a>
       {{/each}}
       
       <a href="/trackerCreator/{{id}}" class="secondary-content">

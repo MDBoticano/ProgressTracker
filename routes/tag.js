@@ -6,9 +6,15 @@ exports.view = function(req, res){
 	res.render('tag',data);
 };
 
-//When url is "/trackerCreator/:id"
+//When url is "/tag/:id"
 exports.generate = function(req, res){
-  var taskID = req.params.id;
+  var tagURL = req.params.tag;
+  tagURL = tagURL.toString();
+  console.log(tagURL);
+  var navLinks = data.navLinks;
+  var location = data.location;
+  var tagged; //searches data for all instances of "tagURL"
+  var newData = {location, navLinks, tagged};
   
-  res.render('tag', data);
+  res.render('tag', newData);
 };
