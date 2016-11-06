@@ -17,7 +17,8 @@ var app = express();
 app.get('/',index.view);
 app.get('/profilePage', profilePage.view);
 app.get('/login', login.view);
-app.get('/trackerCreator', trackerCreator.view);
+app.get('/trackerCreator', trackerCreator.view)
+app.get('/trackerCreator/:id', trackerCreator.generate);
 app.get('/dummyClock', dummyClock.view);
 app.get('/signup', signup.view);
 

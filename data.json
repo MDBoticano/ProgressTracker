@@ -14,6 +14,7 @@
   
   "featuredTasks": [
     {     
+      "id": 1,
       "icon": "",
       "title": "COMPANY PRODUCT TM",
       "description": "Sponsored task for monetization",
@@ -29,6 +30,7 @@
       "time": ""
     },
     {     
+      "id": 2,
       "icon": "",
       "title": "COGS 120 Assignment 1",
       "description": "Conduct needfinding interviews",
@@ -44,6 +46,7 @@
       "time": ""
     },    
     {
+      "id": 3,
       "icon": "",
       "title": "COGS 120 Assignment 2",
       "description": "Storyboard and paper prototype",
@@ -58,6 +61,7 @@
       "time": ""
     },    
     {
+      "id": 4,
       "icon": "",    
       "title": "COGS 120 Assignment 3",
       "description": "Paper Prototypes",
@@ -72,6 +76,7 @@
       "time": ""
     },    
     {
+      "id": 5,
       "icon": "",
       "title": "Cook Rice",
       "description": "A necessary meal",
@@ -88,6 +93,7 @@
       "time": ""
     },
     {
+      "id": 6,
       "icon": "",
       "title": "One Mile Run",
       "description": "Travel a mile by walking, running, jogging or however you like.",
@@ -106,6 +112,7 @@
       "time": ""
     },  
     {
+      "id": 7,
       "icon": "",
       "title": "COGS 120 Midterm",
       "description": "Study guide",

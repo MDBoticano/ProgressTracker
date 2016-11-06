@@ -1,4 +1,8 @@
 $(document).ready(function(){  
+  
+    //CLEAN THIS UP, PUT THESE FUNCTIONS INTO THEIR OWN ONES (initializePage)
+    //!!!PLEASE READ ABOVE!!!//
+  
     $(".button-collapse").sideNav(); //materialize navbar
       
     //Highlight Active collection
@@ -73,7 +77,7 @@ function addfriend() // no ';' here
     else elem.value = "Add friend";
 };
 
-//Time format converter
+//Time format converter, copied directly from stackoverflow 
 function secondsTimeSpanToHMS(s) {
     var h = Math.floor(s/3600); //Get whole hours
     s -= h*3600;
