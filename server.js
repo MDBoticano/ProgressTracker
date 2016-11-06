@@ -10,6 +10,7 @@ var login = require('./routes/login');
 var trackerCreator = require('./routes/trackerCreator');
 var dummyClock = require('./routes/dummyClock');
 var signup = require('./routes/signup');
+var tag = require('./routes/tag');
 
 var app = express();
 
@@ -21,6 +22,8 @@ app.get('/trackerCreator', trackerCreator.view)
 app.get('/trackerCreator/:id', trackerCreator.generate);
 app.get('/dummyClock', dummyClock.view);
 app.get('/signup', signup.view);
+app.get('/tag/', tag.view);
+app.get('/tag/:tag', tag.generate);
 
 
 

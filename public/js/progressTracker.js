@@ -7,20 +7,18 @@ var x = i-1;
 var selector = "#item_"+ i;
 var done = "#item_"+ x;   
 var timeTotal = 0;
+var startTime;
 
 $(document).ready(function(){  
-  
     initializePage();
-    //CLEAN THIS UP, PUT THESE FUNCTIONS INTO THEIR OWN ONES (initializePage)
-    //!!!PLEASE READ ABOVE!!!//
  });  
 
 
 //Called when document ready
 function initializePage() {
-  $(".button-collapse").sideNav(); //materialize navbar
+  $(".button-collapse").sideNav(); // materialize navbar
   
-  $("#CPstart").click(highlightCP);
+  $("#CPstart").click(highlightCP); // highlights active checkpoints yellow, colors finished checkpoints green
 }
 
 // In tracker creator, highlights checkpoint based on button click
