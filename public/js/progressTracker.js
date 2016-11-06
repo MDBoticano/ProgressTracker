@@ -52,16 +52,16 @@ function highlightCP(){
      //console.log(secondsTimeSpanToHMS(timeTotal));
      }     
      if(i <= max_cp+1){
-      console.log("Clicked!"); 
+      //console.log("Clicked!"); 
       $(selector).addClass("CPactive");
       $(done).toggleClass("CPactive").addClass("CPdone");
       $(done).append(TTCstring); 
-      console.log(selector);
+      //console.log(selector);
       i++;
       x++;
       selector = "#item_"+ i;
       done = "#item_"+ x;
-      console.log("remove success");
+      //console.log("remove success");
      }
        
 }

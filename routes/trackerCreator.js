@@ -10,8 +10,9 @@ exports.view = function(req, res){
 exports.generate = function(req, res){
 
   var urlString = req.params.id;
+  //console.log(typeof urlString);
   urlString = urlString.toString(); //string version of url
-  console.log(urlString);
+  //console.log(urlString);
   var taskID = data.taskURLtoID[urlString]; //retrieve id if there is one
   //console.log(taskID); //id recieved
   //console.log(data); //displays data to console
