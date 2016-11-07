@@ -23,9 +23,10 @@ function initializePage() {
 
 // In tracker creator, highlights checkpoint based on button click
 function highlightCP(){
-     //console.log(x , i+1);
-     //Changes "Start" text to "Checkpoint"
-     if(i == 1){
+     console.log(x , i);
+     //Changes "Start" text to "Checkpoint"    
+    
+     if(i == 0){
        $(this).html("Checkpoint");
      }
      //Change the text when apporaching the final checkpoint
