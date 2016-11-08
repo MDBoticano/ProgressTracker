@@ -19,7 +19,18 @@
     "One Mile Run": 6,
     "COGS 120 Midterm": 7
   },
-  
+  "tagURLtoID": {
+      "Food": [5],
+      "Cooking":[5],
+      "Money": [1],
+      "$$$": [1],
+      "Homework": [2, 3, 4, 7],
+      "COGS 120": [2, 3, 4, 7],
+      "Fitness": [6],
+      "Running": [6],
+      "Jogging": [6],
+      "Cardio":[6]
+  },
   "featuredTasks": [
     {     
       "id": 1,
