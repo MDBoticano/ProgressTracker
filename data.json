@@ -26,6 +26,8 @@
       "$$$": [1],
       "Homework": [2, 3, 4, 7],
       "COGS 120": [2, 3, 4, 7],
+      "Study": [7],
+      "Tests": [7],
       "Fitness": [6],
       "Running": [6],
       "Jogging": [6],
@@ -142,7 +144,8 @@
       "tags": [
         { "tag": "Study"},
         { "tag": "Tests"},
-        { "tag": "homework"}
+        { "tag": "Homework"},
+        { "tag": "COGS 120"}
       ],
       "time": ""
     }    
