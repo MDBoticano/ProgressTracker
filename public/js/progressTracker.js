@@ -33,13 +33,7 @@ function highlightCP(){
      if(i == max_cp-1){
        $(this).html("Finish");
      }
-     //Change the text to hint at home
-     if(i == max_cp){
-      var timeToComplete = (secondsTimeSpanToHMS(timeTotal));
-      var timeTotalString = '<center><li class="collection-item" id ="item_total">'+timeToComplete+'</li></center>';
-      $("#checkpoints").append(timeTotalString) 
-      $(this).html("Home");
-     }
+
      //Set the link so it goes home; change this to link to statistics or profile page etc.
      if(i == max_cp+1){
       $(this).attr("href", "/"); 
@@ -53,6 +47,14 @@ function highlightCP(){
        timeTotal += randTime;
      console.log(secondsTimeSpanToHMS(timeTotal));
      }     
+     //Change the text to hint at home & appends time total
+     if(i == max_cp){
+      var timeToComplete = (secondsTimeSpanToHMS(timeTotal));
+      var timeTotalString = '<center><li class="collection-item" id ="item_total">'+timeToComplete+'</li></center>';
+      $("#checkpoints").append(timeTotalString); 
+      $(this).html("Home");
+     }
+     //Changes highlighting
      if(i <= max_cp+1){
       //console.log("Clicked!"); 
       $(selector).addClass("CPactive");
