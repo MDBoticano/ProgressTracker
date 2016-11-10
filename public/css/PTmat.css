@@ -1,11 +1,11 @@
 .collection .CPactive {
     color: black; 
-    background-color: yellow; 
+    background-color: #f7ffb8; 
 }
 
 .collection .CPdone {
     color: black;
-    background-color: green;
+    background-color: #4cb5ab;
 }
 
 .featDesc {
