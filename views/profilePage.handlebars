@@ -69,11 +69,10 @@
 
                 <!--
                 <div>
-                  
-                  
-                  
+  
                   <br>
                   <br>
+
                   <input onclick="addfriend()" class="btn waves-effect waves-light" type="button" value="Add friend" id="addFriendButton">
                   
                 </div>
@@ -95,7 +94,9 @@
           <br>
           <p>{{description}}</p>
           {{#each tags}}
+          <a href="/tag/{{tag}}">
             <div class="chip">{{tag}}</div>
+          </a>
           {{/each}}
         
         
