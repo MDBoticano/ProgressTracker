@@ -72,8 +72,9 @@
       "title": "COGS 120 Assignment 2",
       "description": "Storyboard and paper prototype",
       "checkpoints": [
-        { "checkpoint": "cp1"},
-        { "checkpoint": "cp2"}
+        { "checkpoint": "Create Team Point of View"},
+        { "checkpoint": "Create 3 Storyboards"},
+        { "checkpoint": "Create 2 Paper Prototypes"}
       ],
       "tags": [
         { "tag": "Homework"},
@@ -85,10 +86,12 @@
       "id": 4,
       "icon": "",    
       "title": "COGS 120 Assignment 3",
-      "description": "Paper Prototypes",
+      "description": "Heuristic Evaluations",
       "checkpoints": [
-        { "checkpoint": "cp1"},
-        { "checkpoint": "cp2"}
+        { "checkpoint": "Do heuristic evaluations"},
+        { "checkpoint": "Collect heuristic evaluations"},
+        { "checkpoint": "Write reflection based on feedback"},
+        { "checkpoint": "Create Video Prototype"}
       ],
       "tags": [
         { "tag": "Homework"},
@@ -139,7 +142,8 @@
       "description": "Study guide",
       "checkpoints": [
         { "checkpoint": "Read slides"},
-        { "checkpoint": "Do lab"}
+        { "checkpoint": "Do lab"},
+        { "checkpoint": "Pray"}
       ],
       "tags": [
         { "tag": "Study"},
