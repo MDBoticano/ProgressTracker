@@ -1,6 +1,12 @@
-.collection .CPactive {
+/*.collection .CPactive {
     color: black; 
     background-color: #f7ffb8; 
+} */
+
+:root{
+    --cpcolor2: #f7ffb8;
+    --cpcolor3: #fbffdb;
+    --cpcolor1: #fbffdb;
 }
 
 .collection .CPdone {
@@ -14,4 +20,52 @@
     overflow: hidden;             
     -o-text-overflow: ellipsis;    
     text-overflow:    ellipsis;   
+}
+
+/* Makes the active checkpoint glow, modified from Hummad Arslan Aslam - 
+   https://codepen.io/arximughal/pen/LEpoOJ */
+.collection .CPactive {
+  color: black; 
+  background-color: #f7ffb8; 
+    
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+
+@-webkit-keyframes glowing {
+  0% { background-color: var(--cpcolor1);  }
+  25% {background-color: var(--cpcolor2); }
+  50% { background-color: var(--color3); }
+  75% {background-color: var(--cpcolor2);}
+  100% { background-color: var(--cpcolor1);  }
+
+}
+
+@-moz-keyframes glowing {
+ 0% { background-color: var(--cpcolor1);  }
+  25% {background-color: var(--cpcolor2); }
+  50% { background-color: var(--color3); }
+  75% {background-color: var(--cpcolor2); }
+  100% { background-color: var(--cpcolor1);  }
+
+}
+
+@-o-keyframes glowing {
+ 0% { background-color: var(--cpcolor1);  }
+  25% {background-color: var(--cpcolor2); }
+  50% { background-color: var(--color3); }
+  75% {background-color: var(--cpcolor2); }
+  100% { background-color: var(--cpcolor1);  }
+
+}
+
+@keyframes glowing {
+ 0% { background-color: var(--cpcolor1);  }
+  25% {background-color: var(--cpcolor2); }
+  50% { background-color: var(--color3); }
+  75% {background-color: var(--cpcolor2); }
+  100% { background-color: var(--cpcolor1);  }
+
 }
