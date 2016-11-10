@@ -222,6 +222,18 @@
       { "checkpoint": "Highlights"},
       { "checkpoint": "Experience"},
       { "checkpoint": "Education"},
+      { "checkpoint": "Additional Information"},
+      { "checkpoint": "Basic personal information"},
+      { "checkpoint": "Professional Summary"},
+      { "checkpoint": "Highlights"},
+      { "checkpoint": "Experience"},
+      { "checkpoint": "Education"},
+      { "checkpoint": "Additional Information"},
+      { "checkpoint": "Basic personal information"},
+      { "checkpoint": "Professional Summary"},
+      { "checkpoint": "Highlights"},
+      { "checkpoint": "Experience"},
+      { "checkpoint": "Education"},
       { "checkpoint": "Additional Information"}
     ],
     "tags": [
