@@ -17,7 +17,7 @@ exports.generate = function(req, res){
   var navLinks = data.navLinks;
   var location = data.location;
   var tagged = []; 
-  var newData = {location, navLinks, tagged};
+  var newData = {location, navLinks, tagged, "curTag": tagURL};
     console.log(newData);
   for (i = 0; i < tagID.length; i++) {
       var index =tagID[i];

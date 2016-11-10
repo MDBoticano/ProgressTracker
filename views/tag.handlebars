@@ -50,7 +50,7 @@
   
   <!--location-->
 
-  <div class="col s12 m7">
+  <!--<div class="col s12 m7">
     <div class="card">
       <div class="card-image">
         <span class="card-title">Card Title</span>
@@ -59,11 +59,21 @@
         <h5 class="center-align">{{location}}</h5>
         <a href="#!"><h6 class="center-align">Change Location</h6></a>
       </div>
+
     </div>
-  </div>
+  </div> -->
+    
+
 
   <!--activities list -->
   <ul class="collection featTasks">
+      <!--Viewing tags for...-->
+      <li class="collection-item">
+      <div class="card-content center-align">
+        <p >Acitivities tagged: {{curTag}}</p>
+          <!--<div class ="chip"></div>-->
+      </div>
+      </li>
     {{#each tagged}}
     <li class="collection-item avatar featTasks">
       <!--<i class="material-icons circle">{{icon}}</i>-->
