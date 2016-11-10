@@ -17,21 +17,26 @@
     "COGS 120 Assignment 3": 4,
     "Cook Rice": 5,
     "One Mile Run": 6,
-    "COGS 120 Midterm": 7
+    "COGS 120 Midterm": 7,
+    "Push Up and Sit Ups": 8,
+    "SAT Practice": 9,
+    "Math 20 Homework": 10,
+    "Write Resume": 11
   },
   "tagURLtoID": {
-      "Food": [5],
       "Cooking":[5],
-      "Money": [1],
-      "$$$": [1],
-      "Homework": [2, 3, 4, 7],
+      "Money": [1, 11],
+      "$$$": [1, 11],
+      "Homework": [2, 3, 4, 7, 10],
       "COGS 120": [2, 3, 4, 7],
-      "Study": [7],
-      "Tests": [7],
-      "Fitness": [6],
+      "Study": [7, 9, 10],
+      "Tests": [7, 9],
+      "Fitness": [6, 8],
       "Running": [6],
       "Jogging": [6],
-      "Cardio":[6]
+      "Cardio":[6],
+      "Strength":[8],
+      "Work":[1, 11]
   },
   "featuredTasks": [
     {     
@@ -152,6 +157,81 @@
         { "tag": "COGS 120"}
       ],
       "time": ""
-    }    
+    },
+    {
+      "id": 8,
+      "icon": "",
+      "title": "Push Up and Sit Ups",
+      "description": "Daily push up and sit up workout",
+      "checkpoints": [
+        { "checkpoint": "20 Push Ups"},
+        { "checkpoint": "20 Sit Ups"},
+        { "checkpoint": "20 Push Ups"},
+        { "checkpoint": "20 Sit Ups"},
+        { "checkpoint": "20 Push Ups"},
+        { "checkpoint": "20 Sit Ups"}
+      ],
+      "tags": [
+        { "tag": "Fitness"},
+        { "tag": "Strength"}
+      ],
+      "time": ""
+    },
+    {
+      "id": 9,
+      "icon": "",
+      "title": "SAT Practice",
+      "description": "Get yourself ready for the SAT",
+      "checkpoints": [
+        { "checkpoint": "Reading Section"},
+        { "checkpoint": "Math Section"},
+        { "checkpoint": "Writing Section"},
+        { "checkpoint": "Essay Section"}
+      ],
+      "tags": [
+        { "tag": "Study"},
+        { "tag": "Test"}
+      ],
+      "time": ""
+    },
+    {
+      "id": 10,
+      "icon": "",
+      "title": "Math 20 Homework",
+      "description": "Checkpoints for Math 20 Homework",
+      "checkpoints": [
+        { "checkpoint": "25% Complete"},
+        { "checkpoint": "50% Complete"},
+        { "checkpoint": "75% Complete"},
+        { "checkpoint": "100% Complete"}
+      ],
+      "tags": [
+        { "tag": "Study"},
+        { "tag": "Homework"}
+      ],
+      "time": ""
+    },      
+    {
+    "id": 11,
+    "icon": "",
+    "title": "Write Resume",
+    "description": "Resume layout to success",
+    "checkpoints": [
+      { "checkpoint": "Basic personal information"},
+      { "checkpoint": "Professional Summary"},
+      { "checkpoint": "Highlights"},
+      { "checkpoint": "Experience"},
+      { "checkpoint": "Education"},
+      { "checkpoint": "Additional Information"}
+    ],
+    "tags": [
+      { "tag": "Work"},
+      { "tag": "Money"},
+      { "tag": "$$$"}
+    ],
+    "time": ""
+    }
+    
+
   ]
 }
