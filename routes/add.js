@@ -41,7 +41,19 @@ exports.addFriend = function(req, res) {
   
   data.featuredTasks.push(newTask);
   data.taskURLtoID[titleVal] = idVal; //Updates taskURLtoID with new task
-  data.tagURLtoID[tag1Val] = [idVal];
+  
+  
+  
+  //If there already exists a tag, add the new one
+  if(data.tagURLtoID.hasOwnProperty(tag1Val)){
+    data.tagURLtoID[tag1Val].push(idVal);
+  } else { //create a new one
+     data.tagURLtoID[tag1Val] = [idVal];
+  }
+ 
+  
+  
+  
   console.log(data.taskURLtoID);
   console.log(data.tagURLtoID);
 }
