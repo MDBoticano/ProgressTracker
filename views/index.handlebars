@@ -46,6 +46,7 @@
   </nav>
   </div>  
   
+
   <!--location-->
 
   <div class="col s12 m7">
@@ -54,11 +55,21 @@
         <span class="card-title">Card Title</span>
       </div>
       <div class="card-content">
-        <h5 class="center-align">{{location}}</h5>
-        <a href="#!"><h6 class="center-align">Change Location</h6></a>
+        <p class="center-align">Popular at</p>
+        <h5 class="center-align"> {{location}}</h5>
+        <!--<a href="#!"><h6 class="center-align">Change Location</h6></a>-->
+        
+         <!-- Featured Tags -->
+        {{#each popularTags}}
+         <a href="/tag/{{this}}">
+          <div class="chip">{{this}}</div>
+          </a>
+        {{/each}}
       </div>
     </div>
   </div>
+  
+ 
 
   <!--activities list -->
   <ul class="collection featTasks">

@@ -37,6 +37,11 @@
       "Strength":[8],
       "Work":[1, 11]
   },
+  "popularTags": [
+    "Homework",
+    "Fitness",
+    "Study"    
+  ],
   "featuredTasks": [
     {     
       "id": 1,
