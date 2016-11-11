@@ -29,23 +29,19 @@ exports.addFriend = function(req, res) {
       {"checkpoint": cp4Val}
     ],
     "tags": [
-      { "tag": tag1Val},
-      { "tag": tag2Val}
+      { "tag": tag1Val}
+      //{ "tag": tag2Val}
     ],
     "time": ""
   }
   
-  var urlID = {};
-  urlID[titleVal] = idVal;
-
-  
-  console.log(urlID);
+  //console.log(urlID);
   
   console.log(newTask);
   
   data.featuredTasks.push(newTask);
   data.taskURLtoID[titleVal] = idVal; //Updates taskURLtoID with new task
-  data.tagURltoID[tag1Val] = idVal;
+  data.tagURLtoID[tag1Val] = [idVal];
   console.log(data.taskURLtoID);
-  console.log(data.tagURltoID);
+  console.log(data.tagURLtoID);
 }
