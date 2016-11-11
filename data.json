@@ -4,7 +4,9 @@
     { "link": "/",
       "linkText": "Home"},
     { "link": "/profilePage",
-      "linkText": "Profile"},    
+      "linkText": "Profile"},
+    { "link": "/trackerEditor",
+      "linkText": "Tracker"},
     { "link": "/login",
       "linkText": "Log Out"}    
   ],

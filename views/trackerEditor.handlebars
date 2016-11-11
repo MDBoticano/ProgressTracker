@@ -1,0 +1,142 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>Progress Tracker</title>	
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <!--<link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
+      
+      <!-- Materialize Template stuff (Material Design) coding thing-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+      
+      <!--our css-->  
+      <link rel="stylesheet" href="/css/PTmat.css"/>
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->        
+</head>
+
+<body>
+    <!--Materialize Navbar Code-->
+    <div class="navbar-fixed">
+    <nav class="teal"> <!--change navbar background color here!-->
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Progress Tracker</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse">
+        <i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down"> <!-- full web page -->
+        {{#each navLinks}}
+          <li><a href="{{link}}">{{linkText}}</a></li>
+        {{/each}}
+      </ul>
+      <ul class="side-nav" id="mobile-demo"> <!-- mobile -->
+        <br>
+        <br>
+        {{#each navLinks}}
+          <li><a href="{{link}}">{{linkText}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+    </nav>
+    </div>  
+    
+    
+    <!-- Body --> <!-- Form to fill out add -->
+    <div class="card">
+    <div class="card-content">
+      <form id="addTaskForm" role="form" method="get" action="/add">
+        <h5 class = "center-align">Create your own task!</h5>
+        <div class="form-group"> <!-- Title -->
+          <label for="title">Title</label>
+          <input type="text" class="form-control" id="title" placeholder="Title" name="title">
+        </div>
+        <div class="form-group"> <!-- Description -->
+          <label for="description">Description</label>
+          <input type="text" class="form-control" id="description" placeholder="Description" name="description">
+        </div>
+        <div class="form-group">
+          <label for="cp1">Checkpoint 1</label>
+          <input type="text" class="form-control" id="cp1" placeholder="Checkpoint 1" name="cp1">
+        </div>
+        <div class="form-group">
+          <label for="cp2">Checkpoint 2</label>
+          <input type="text" class="form-control" id="cp2" placeholder="Checkpoint 2" name="cp2">
+        </div>
+        <div class="form-group">
+          <label for="cp3">Checkpoint 3</label>
+          <input type="text" class="form-control" id="cp3" placeholder="Checkpoint 3" name="cp3">
+        </div>
+        <div class="form-group">
+          <label for="cp4">Checkpoint 4</label>
+          <input type="text" class="form-control" id="cp4" placeholder="Checkpoint 4" name="cp4">
+        </div>
+         <div class="form-group">
+          <label for="tag1">Tag 1</label>
+          <input type="text" class="form-control" id="tag1" placeholder="Tag 1" name="tag1">
+        </div>
+        <div class="form-group">
+          <label for="tag1">Tag 2</label>
+          <input type="text" class="form-control" id="tag2" placeholder="Tag 2" name="tag2">
+        </div>
+        
+        <div class="center-align">
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Confirm Creation"></input>
+        <a href = "/" class="btn">Cancel</a>
+        </div>
+        
+      </form>
+    </div>
+    </div>
+
+
+    <!--<div>
+      <a class="fixed-start-btn waves-effect waves-light btn-large" id="CPstart">Start</a>
+    </div>-->
+
+    <br>
+    <br>
+    
+    <!-- Tags within the tracker creator
+    <center>
+    <div class="row"> 
+        <!-- tags
+        {{#each task.tags}}
+          <a href="/tag/{{tag}}">
+          <div class="chip">{{tag}}</div>
+          </a>
+        {{/each}}
+    </div>      
+    </center>
+    -->
+
+    <br>
+
+    <!-- Javascripts -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+    <!--<script src="js/bootstrap.min.js"></script>
+    <!-- Materialize js-->
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <!-- own js-->
+    <script src="/js/progressTracker.js"></script>
+ 
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-87264919-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+</body>
+</html>
