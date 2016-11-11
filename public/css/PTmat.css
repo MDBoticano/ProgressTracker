@@ -25,12 +25,13 @@
 
 .fixed-start-btn {
   position: fixed;
-  right: 138px;
-  bottom: 15px;
-  padding-top: 0px;
-  margin-bottom: 0;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 998;
 }
+
+
 
 /* Makes the active checkpoint glow, modified from Hummad Arslan Aslam - 
    https://codepen.io/arximughal/pen/LEpoOJ */

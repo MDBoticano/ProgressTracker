@@ -4528,11 +4528,17 @@ small {
 }
 
 .card {
-  position: relative;
+  position: fixed;
   margin: 0.5rem 0 1rem 0;
   background-color: #fff;
   transition: box-shadow .25s;
   border-radius: 2px;
+
+  right: 138px;
+  bottom: 15px;
+  padding-top: 0px;
+  margin-bottom: 0;
+  z-index: 998;
 }
 
 .card .card-title {
@@ -5018,7 +5024,7 @@ button.btn-floating {
   position: fixed;
   right: 23px;
   bottom: 23px;
-  padding-top: 10px;
+  padding-top: 15px;
   margin-bottom: 0;
   z-index: 998;
 }
