@@ -74,7 +74,7 @@
 
   
   <!--activities list -->
-  <ul class="collection featTasks">
+  <ul class="collection collapsible featTasks">
     <li class="collection-item"><p class="center-align">All Active Tasks</p></li>
     {{#each featuredTasks}}
     <li class="collection-item avatar featTasks">
@@ -87,6 +87,7 @@
         <div class="chip">{{tag}}</div>
         </a>
       {{/each}}
+
       
       <a href="/trackerCreator/{{title}}" class="secondary-content">
         <i class="material-icons">add</i>
