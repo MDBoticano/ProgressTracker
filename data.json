@@ -5,8 +5,6 @@
       "linkText": "Home"},
     { "link": "/profilePage",
       "linkText": "Profile"},    
-    /*{ "link": "/trackerCreator",
-      "linkText": "Tracker"},*/
     { "link": "/login",
       "linkText": "Log Out"}    
   ],
@@ -190,7 +188,7 @@
       ],
       "tags": [
         { "tag": "Study"},
-        { "tag": "Test"}
+        { "tag": "Tests"}
       ],
       "time": ""
     },
