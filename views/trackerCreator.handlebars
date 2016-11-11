@@ -50,47 +50,48 @@
     
     <!-- Body --> <!-- this needs to be populated via JSON -->
     <div class="card">
-    <h3 class="center-align">{{task.title}}</h3>
-    <p class="center-align">{{task.description}}</p>
-    
-    
-    
-    <!-- checkpoint list -->    
-    
-    <h5 class="center-align">Checkpoints</h5>
-    <div class="row">
-    <div class="col s12">
-    <ul class="collection " id="checkpoints">
-    {{#each task.checkpoints}}  
-      <li class="collection-item" id="item_{{@index}}">{{checkpoint}}</li>
-    {{/each}}
-    </ul>
-    </div>
-    </div>    
     <br>
+      <h3 class="center-align">{{task.title}}</h3>
+      <p class="center-align">{{task.description}}</p>
+    
+      <!-- checkpoint list -->      
+      <h5 class="center-align">Checkpoints</h5>
+      <div class="row">
+        <div class="col s12">
+          <ul class="collection " id="checkpoints">
+          {{#each task.checkpoints}}  
+            <li class="collection-item" id="item_{{@index}}">{{checkpoint}}</li>
+          {{/each}}
+          </ul>
+        </div>
+      </div>  
+    <br>  
     </div>
         
       
         
-    <!-- button for lapping/changing active checkpoint -->
+    <!-- button for lapping/changing active checkpoint 
     <div>
-    <center><a class="card waves-effect waves-light btn" id="CPstart">Start</a></center>
-    <br>
-    <br>
+    <center><a class="card waves-effect waves-light btn" id="CPstart2">Start</a></center>
     </div>
+    -->
+
+
+    <br>
+    <br>
+
 
     <div>
+      <a class="fixed-start-btn waves-effect waves-light btn-large" id="CPstart">Start</a>
+    </div>
+
+    <br>
+    <br>
     
-    <a class="fixed-start-btn waves-effect waves-light btn" id="CPstart">Start</a>
-
-    <br>
-    <br>
-    </div>
-
-        
+    <!-- Tags within the tracker creator
     <center>
     <div class="row"> 
-        <!-- tags -->
+        <!-- tags
         {{#each task.tags}}
           <a href="/tag/{{tag}}">
           <div class="chip">{{tag}}</div>
@@ -98,6 +99,7 @@
         {{/each}}
     </div>      
     </center>
+    -->
 
     <br>
 
