@@ -5,8 +5,8 @@
       "linkText": "Home"},
     { "link": "/profilePage",
       "linkText": "Profile"},    
-    { "link": "/trackerCreator",
-      "linkText": "Tracker"},
+    /*{ "link": "/trackerCreator",
+      "linkText": "Tracker"},*/
     { "link": "/login",
       "linkText": "Log Out"}    
   ],
