@@ -19,6 +19,9 @@ function initializePage() {
   $(".button-collapse").sideNav(); // materialize navbar
   
   $("#CPstart").click(highlightCP); // highlights active checkpoints yellow, colors finished checkpoints green
+  
+  $('.collapsible').collapsible();
+      
 }
 
 // In tracker creator, highlights checkpoint based on button click

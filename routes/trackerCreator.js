@@ -9,6 +9,9 @@ exports.view = function(req, res){
 //When url is "/trackerCreator/:id"
 exports.generate = function(req, res){
 
+    var idVal = data.featuredTasks.length + 1;
+  console.log(idVal);
+  
   var urlString = req.params.id;
   //console.log(typeof urlString);
   urlString = urlString.toString(); //string version of url

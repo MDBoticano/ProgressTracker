@@ -12,6 +12,9 @@ var dummyClock = require('./routes/dummyClock');
 var signup = require('./routes/signup');
 var tag = require('./routes/tag');
 var viewDetails = require('./routes/viewDetails');
+// Adding to form code
+var trackerEditor = require('./routes/trackerEditor');
+var add = require('./routes/add');
 
 var app = express();
 
@@ -28,6 +31,9 @@ app.get('/tag/:tag', tag.generate);
 app.get('/viewDetails/', viewDetails.view);
 app.get('/viewDetails/:id', viewDetails.generate);
 
+// Adding to form code
+app.get('/trackerEditor', trackerEditor.view);
+app.get('/add',add.addFriend);
 
 
 app.engine('handlebars', handlebars());

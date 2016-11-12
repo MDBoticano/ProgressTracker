@@ -9,6 +9,7 @@ exports.view = function(req, res){
     
     var navLinks = data.navLinks;
     var location = data.location;
+    var popularTags = data.popularTags;
     //For each tag, grab the first value and add it 
     var featuredTasks = [];
     var numTagged = Object.keys(data.tagURLtoID).length; //Get number of tags
@@ -26,9 +27,9 @@ exports.view = function(req, res){
     }
     
     
-    var newData = {location, navLinks, featuredTasks};
+    var newData = {location, navLinks, popularTags, featuredTasks};
     
     //console.log(newData);
     
-    res.render('index',newData);
+    res.render('index', data);
 }
