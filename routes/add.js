@@ -1,9 +1,7 @@
 var data = require("../data.json");
 
 exports.addFriend = function(req, res) {
-  
-  //$(".customCheckpoints .form-control").length;
-  
+    
   // ------ Form inputs ------------
   var idVal = data.featuredTasks.length + 1;
   //console.log(idVal);
@@ -83,8 +81,8 @@ exports.addFriend = function(req, res) {
   //console.log(data.taskURLtoID);
   //console.log(data.tagURLtoID);
   
+  //Go to the newly made tracker
   var goToForm = ("/trackerCreator/" + titleVal).toString();
   //console.log(goToForm);
-  
-  res.redirect(goToForm);
+  res.redirect(goToForm); 
 }
