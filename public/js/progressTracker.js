@@ -17,6 +17,16 @@ var customCPmin = 1;
 
 $(document).ready(function(){  
     initializePage();
+  
+    
+    /* Prevent enter from doing anything (e.g. submit form) - this should be 
+     * fine tuned for only the form, but it should be okay for now */
+    $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
  });  
 
 
@@ -24,7 +34,7 @@ $(document).ready(function(){
 function initializePage() {
   $(".button-collapse").sideNav(); // materialize navbar
   
-  $("#CPstart").click(highlightCP); // highlights active checkpoints yellow, colors finished checkpoints green
+  $("#CPstart").click(highlightCP);
   
   $('.collapsible').collapsible();
   
@@ -32,18 +42,19 @@ function initializePage() {
   
   $("#removeCheckpoint").click(removeCheckpoint);
   
-  $("#confirmBtn").click(requireFields);
+  $("#addTaskForm").submit(requireFields());
       
 }
 
+
 function requireFields() {
+    console.log("Submitted!");
     var x = $("#title");
     if (x == null || x == "") {
         alert("Title must be filled out");
         return false;
     }
 }
-
 
 
 function addCheckpoint(){
@@ -66,14 +77,15 @@ function removeCheckpoint(){
   if (numCheckpoints > customCPmin ){
     var removeID = "#cp" + numCheckpoints;
     var lastCheckpoint = $(removeID);
-    //console.log(lastCheckpoint);
+    //console.log("Removed: " + (lastCheckpoint.toString()));
 
     $(lastCheckpoint).remove(); 
 
     numCheckpoints -= 1;
+    
+    //console.log(numCheckpoints);
   }
 }
-
 
 
 // In tracker creator, highlights checkpoint based on button click
@@ -137,6 +149,7 @@ function addfriend() // no ';' here
         }
     else elem.value = "Add friend";
 }
+
 
 //Time format converter, copied directly from stackoverflow 
 function secondsTimeSpanToHMS(s) {
