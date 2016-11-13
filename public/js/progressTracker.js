@@ -31,8 +31,20 @@ function initializePage() {
   $("#addCheckpoint").click(addCheckpoint);
   
   $("#removeCheckpoint").click(removeCheckpoint);
+  
+  $("#confirmBtn").click(requireFields);
       
 }
+
+function requireFields() {
+    var x = $("#title");
+    if (x == null || x == "") {
+        alert("Title must be filled out");
+        return false;
+    }
+}
+
+
 
 function addCheckpoint(){
   if (numCheckpoints < customCPmax){

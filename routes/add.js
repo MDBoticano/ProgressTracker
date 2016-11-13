@@ -10,6 +10,9 @@ exports.addFriend = function(req, res) {
   var titleVal = req.query.title;
   var descVal = req.query.description;
   
+  var tag1Val = req.query.tag1;
+  var tag2Val = req.query.tag2;
+  
   var cp1Val = req.query.cp1;
   var cp2Val = req.query.cp2;
   var cp3Val = req.query.cp3;
@@ -21,8 +24,11 @@ exports.addFriend = function(req, res) {
   var cp9Val = req.query.cp9;
   var cp10Val = req.query.cp10;
   
+  //Takes all the checkpoint inputs and puts them into an array
   var cpArray = [cp1Val, cp2Val, cp3Val, cp4Val, cp5Val, cp6Val, cp7Val, cp8Val, cp9Val, cp10Val];
-  console.log(cpArray);
+  //console.log(cpArray);
+  
+  //Create an array of checkpoints; removes blank checkpoints
   var validCP = [];
   for (i = 0; i < cpArray.length; i++){
     var curValidCP;    
@@ -32,33 +38,22 @@ exports.addFriend = function(req, res) {
       validCP = validCP.concat(curValidCP);
     }    
   }
-  console.log(validCP);
+  //console.log(validCP);
   
-  var tag1Val = req.query.tag1;
-  var tag2Val = req.query.tag2;
   
   //console.log("Add Task Ran");
   //console.log(nameVal + ", " + descVal);
-  
-    var checkpointsOG =  [
-      {"checkpoint": cp1Val},
-      {"checkpoint": cp2Val},
-      {"checkpoint": cp3Val},
-      {"checkpoint": cp4Val}
-    ];
-  
-    var checkpoints = [];
-    var firstCP = {"checkpoint": cp1Val};
-    //checkpoints.push(firstCP);
-  
-    console.log(checkpoints);
-  
-    for (i = 0; i <validCP.length; i++){
-      var newCP = {"checkpoint": validCP[i]};
-      checkpoints.push(newCP);
-    }
-  
-    console.log(checkpoints);
+
+  var checkpoints = [];
+
+  //console.log(checkpoints);
+  //Creates the new checkpoints array to put into newTask
+  for (i = 0; i <validCP.length; i++){
+    var newCP = {"checkpoint": validCP[i]};
+    checkpoints.push(newCP);
+  }
+
+  //console.log(checkpoints);
   
   
   var newTask = {
@@ -74,7 +69,7 @@ exports.addFriend = function(req, res) {
   }
   
   //console.log(urlID);
-  console.log(newTask);
+  //console.log(newTask);
   
   data.featuredTasks.push(newTask);
   data.taskURLtoID[titleVal] = idVal; //Updates taskURLtoID with new task
