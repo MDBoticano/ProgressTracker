@@ -33,7 +33,8 @@ app.get('/viewDetails/:id', viewDetails.generate);
 
 // Adding to form code
 app.get('/trackerEditor', trackerEditor.view);
-app.get('/add',add.addFriend);
+app.get('/add', add.addFriend);
+//app.get('/add', trackerEditor.view);
 
 
 app.engine('handlebars', handlebars());

@@ -82,4 +82,9 @@ exports.addFriend = function(req, res) {
   }
   //console.log(data.taskURLtoID);
   //console.log(data.tagURLtoID);
+  
+  var goToForm = ("/trackerCreator/" + titleVal).toString();
+  //console.log(goToForm);
+  
+  res.redirect(goToForm);
 }

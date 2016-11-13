@@ -46,9 +46,16 @@ function initializePage() {
       
 }
 
+// manual redirect, works for other buttons but not input type submit
+function manRedir(){
+  console.log("Redirecting");
+  window.location.href="/";
+  
+}
 
+//Check if fields are properly populated, currently nonfunctional other than console.log
 function requireFields() {
-    console.log("Submitted!");
+    //console.log("Submitted!");
     var x = $("#title");
     if (x == null || x == "") {
         alert("Title must be filled out");
