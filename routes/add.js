@@ -9,26 +9,63 @@ exports.addFriend = function(req, res) {
   //console.log(idVal);
   var titleVal = req.query.title;
   var descVal = req.query.description;
+  
   var cp1Val = req.query.cp1;
   var cp2Val = req.query.cp2;
   var cp3Val = req.query.cp3;
   var cp4Val = req.query.cp4;
+  var cp5Val = req.query.cp5;
+  var cp6Val = req.query.cp6;
+  var cp7Val = req.query.cp7;
+  var cp8Val = req.query.cp8;
+  var cp9Val = req.query.cp9;
+  var cp10Val = req.query.cp10;
+  
+  var cpArray = [cp1Val, cp2Val, cp3Val, cp4Val, cp5Val, cp6Val, cp7Val, cp8Val, cp9Val, cp10Val];
+  console.log(cpArray);
+  var validCP = [];
+  for (i = 0; i < cpArray.length; i++){
+    var curValidCP;    
+    if (cpArray[i] != "" && cpArray[i] != undefined){
+      curValidCP = cpArray[i];
+      //console.log(curValidCP);
+      validCP = validCP.concat(curValidCP);
+    }    
+  }
+  console.log(validCP);
+  
   var tag1Val = req.query.tag1;
   var tag2Val = req.query.tag2;
   
   //console.log("Add Task Ran");
   //console.log(nameVal + ", " + descVal);
   
-  var newTask = {
-    "id": idVal,
-    "title": titleVal,
-    "description": descVal,
-    "checkpoints": [
+    var checkpointsOG =  [
       {"checkpoint": cp1Val},
       {"checkpoint": cp2Val},
       {"checkpoint": cp3Val},
       {"checkpoint": cp4Val}
-    ],
+    ];
+  
+    var checkpoints = [];
+    var firstCP = {"checkpoint": cp1Val};
+    //checkpoints.push(firstCP);
+  
+    console.log(checkpoints);
+  
+    for (i = 0; i <validCP.length; i++){
+      var newCP = {"checkpoint": validCP[i]};
+      checkpoints.push(newCP);
+    }
+  
+    console.log(checkpoints);
+  
+  
+  var newTask = {
+    "id": idVal,
+    "title": titleVal,
+    "description": descVal,
+    checkpoints,
     "tags": [
       { "tag": tag1Val}
       //{ "tag": tag2Val}
@@ -37,24 +74,17 @@ exports.addFriend = function(req, res) {
   }
   
   //console.log(urlID);
-  
-  //console.log(newTask);
+  console.log(newTask);
   
   data.featuredTasks.push(newTask);
   data.taskURLtoID[titleVal] = idVal; //Updates taskURLtoID with new task
-  
-  
-  
+
   //If there already exists a tag, add the new one
   if(data.tagURLtoID.hasOwnProperty(tag1Val)){
     data.tagURLtoID[tag1Val].push(idVal);
   } else { //create a new one
      data.tagURLtoID[tag1Val] = [idVal];
   }
- 
-  
-  
-  
   //console.log(data.taskURLtoID);
   //console.log(data.tagURLtoID);
 }
