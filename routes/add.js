@@ -2,10 +2,11 @@ var data = require("../data.json");
 
 exports.addFriend = function(req, res) {
   
+  //$(".customCheckpoints .form-control").length;
   
-  // Form inputs
+  // ------ Form inputs ------------
   var idVal = data.featuredTasks.length + 1;
-  console.log(idVal);
+  //console.log(idVal);
   var titleVal = req.query.title;
   var descVal = req.query.description;
   var cp1Val = req.query.cp1;
@@ -15,7 +16,7 @@ exports.addFriend = function(req, res) {
   var tag1Val = req.query.tag1;
   var tag2Val = req.query.tag2;
   
-  console.log("Add Task Ran");
+  //console.log("Add Task Ran");
   //console.log(nameVal + ", " + descVal);
   
   var newTask = {
@@ -37,7 +38,7 @@ exports.addFriend = function(req, res) {
   
   //console.log(urlID);
   
-  console.log(newTask);
+  //console.log(newTask);
   
   data.featuredTasks.push(newTask);
   data.taskURLtoID[titleVal] = idVal; //Updates taskURLtoID with new task
@@ -54,6 +55,6 @@ exports.addFriend = function(req, res) {
   
   
   
-  console.log(data.taskURLtoID);
-  console.log(data.tagURLtoID);
+  //console.log(data.taskURLtoID);
+  //console.log(data.tagURLtoID);
 }

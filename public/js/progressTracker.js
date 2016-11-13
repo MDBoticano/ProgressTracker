@@ -9,6 +9,12 @@ var done = "#item_"+ x;
 var timeTotal = 0;
 var startTime;
 
+//For custom checkpoints
+var numCheckpoints = $(".customCheckpoints .form-control").length;
+var customCPmax = 10;
+var customCPmin = 1;
+
+
 $(document).ready(function(){  
     initializePage();
  });  
@@ -21,8 +27,42 @@ function initializePage() {
   $("#CPstart").click(highlightCP); // highlights active checkpoints yellow, colors finished checkpoints green
   
   $('.collapsible').collapsible();
+  
+  $("#addCheckpoint").click(addCheckpoint);
+  
+  $("#removeCheckpoint").click(removeCheckpoint);
       
 }
+
+function addCheckpoint(){
+  if (numCheckpoints < customCPmax){
+  numCheckpoints += 1;
+  //console.log(numCheckpoints);
+  var placeholderText = "Checkpoint\u00A0" + (numCheckpoints);
+  placeholderText = placeholderText.toString();
+  //console.log(placeholderText);
+  var nameText = "cp" + numCheckpoints;
+  var newCheckpoint = '<div class="form-group">' + 
+    '<input type="text" class="form-control" id=' + nameText + ' placeholder='+ placeholderText + 
+      ' name='+nameText+'></div>';
+  $(".customCheckpoints").append(newCheckpoint); 
+  }
+}
+
+function removeCheckpoint(){
+  
+  if (numCheckpoints > customCPmin ){
+    var removeID = "#cp" + numCheckpoints;
+    var lastCheckpoint = $(removeID);
+    //console.log(lastCheckpoint);
+
+    $(lastCheckpoint).remove(); 
+
+    numCheckpoints -= 1;
+  }
+}
+
+
 
 // In tracker creator, highlights checkpoint based on button click
 function highlightCP(){
