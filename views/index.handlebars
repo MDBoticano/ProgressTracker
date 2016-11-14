@@ -69,10 +69,48 @@
       </div>
     </div>
   </div>
+  
+  
+  <!--activities list (new, collapsibles) --> 
+  <ul class="collapsible" data-collapsible="accordion">
+    {{#each featuredTasks}}
+    <li >
+      <div class="collapsible-header">   
+      <!--<i class="material-icons circle">{{icon}}</i>-->
+      <span class="title">{{title}}</span>
+      <a href="/trackerCreator/{{title}}" class="secondary-content">
+        <i class="material-icons">add</i>
+      </a>
+      <br>
+      {{#each tags}}
+        <a href="/tag/{{tag}}">
+        <div class="chip">{{tag}}</div>
+        </a>
+      {{/each}}
+     
+      
+      </div>
+      <div class="collapsible-body">
+      <br>
+      <!-- checkpoint list -->      
+      <div class="row">
+        <div class="col s12">
+          <ul class="collection " id="checkpoints">
+          {{#each checkpoints}}  
+            <li class="collection-item" id="item_{{@index}}">{{checkpoint}}</li>
+          {{/each}}
+          </ul>
+        </div>
+      </div>  
+      </div>
+    </li>
+    {{/each}}
+
+  </ul>
        
 
- <!--activities list -->
-  <ul class="collection collapsible featTasks">
+ <!--activities list (old) -->
+  <ul class="collection collapsible featTasks" data-collapsible="accordion">
     <li class="collection-item"><p class="center-align">All Active Tasks</p></li>
     {{#each featuredTasks}}
     <li class="collection-item avatar featTasks">
