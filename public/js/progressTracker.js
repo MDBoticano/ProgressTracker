@@ -7,7 +7,7 @@ var x = i-1;
 var selector = "#item_"+ i;
 var done = "#item_"+ x;   
 var timeTotal = 0;
-var startTime;
+
 
 //For custom checkpoints
 var numCheckpoints = $(".customCheckpoints .form-control").length;
@@ -95,11 +95,34 @@ function removeCheckpoint(){
 }
 
 
+var startTime;
+var lastTime;
+var timeDiff;
+var timeDiffSec;
+
+
 // In tracker creator, highlights checkpoint based on button click
 function highlightCP(){
-     console.log(x , i);
+      console.log(x , i);
+      
+        
+      // initialize start time
+      // if there isn't a start time
+      if(startTime == undefined){
+        lastTime = new Date().getTime(); 
+        startTime = lastTime;
+        timeDiff = 0;        
+        console.log("Time init!");
+      } else if (timeDiff != undefined) {
+        var curTime = new Date().getTime();
+        timeDiff = curTime - lastTime; // Get the first time diff
+        lastTime = curTime;
+      }
+      //console.log(timeDiff);
+      timeDiffSec = timeDiff/1000; //(convert ms to seconds)
+      console.log(timeDiffSec);
+      
      //Changes "Start" text to "Checkpoint"    
-    
      if(i == 0){
        $(this).html("Checkpoint");
      }
@@ -112,17 +135,16 @@ function highlightCP(){
      if(i == max_cp+1){
       $(this).attr("href", "/"); 
      }
-     //random time per task
+     // Keep track of total time
      if(i > 0 && i <= max_cp+1) {
-       var randTime = Math.floor((Math.random()*90)+90);
-       var timeToComplete = (secondsTimeSpanToHMS(randTime));
+       var timeToComplete = (secondsTimeSpanToHMS(timeDiffSec));
        var TTCstring = " - " + timeToComplete;
-
-       timeTotal += randTime;
-     console.log(secondsTimeSpanToHMS(timeTotal));
+       timeTotal+=timeDiffSec;
+       console.log(secondsTimeSpanToHMS(timeTotal));
      }     
      //Change the text to hint at home & appends time total
      if(i == max_cp){
+      timeTotal = (timeTotal).toFixed(3); //3 decimal places
       var timeToComplete = (secondsTimeSpanToHMS(timeTotal));
       var timeTotalString = '<center><li class="collection-item" id ="item_total">'+timeToComplete+'</li></center>';
       $("#checkpoints").append(timeTotalString); 
@@ -141,7 +163,6 @@ function highlightCP(){
       done = "#item_"+ x;
       //console.log("remove success");
      }
-       
 }
 
 
