@@ -119,7 +119,7 @@ function highlightCP(){
         lastTime = curTime;
       }
       //console.log(timeDiff);
-      timeDiffSec = timeDiff/1000; //(convert ms to seconds)
+      timeDiffSec = +((timeDiff/1000).toFixed(3)); //(convert ms to seconds)
       console.log(timeDiffSec);
       
      //Changes "Start" text to "Checkpoint"    
