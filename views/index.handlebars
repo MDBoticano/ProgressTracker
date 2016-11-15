@@ -82,11 +82,6 @@
         <i class="material-icons">add</i>
       </a>
       <br>
-      {{#each tags}}
-        <a href="/tag/{{tag}}">
-        <div class="chip">{{tag}}</div>
-        </a>
-      {{/each}}
      
       
       </div>
@@ -100,7 +95,15 @@
             <li class="collection-item" id="item_{{@index}}">{{checkpoint}}</li>
           {{/each}}
           </ul>
+          <br>
+          {{#each tags}}
+          <a href="/tag/{{tag}}">
+            <div class="chip">{{tag}}</div>
+          </a>
+          {{/each}}
+     
         </div>
+        
       </div>  
       </div>
     </li>
