@@ -76,11 +76,17 @@
     {{#each featuredTasks}}
     <li >
       <div class="collapsible-header">   
-      <i class="material-icons circle">error</i>
-        <span class="title">{{title}} </span>
+      <!--
+        <i class="material-icons circle">error</i>
+        <i class="material-icons circle">{{icon}}</i>
+      -->
+        
+        <img src="images/{{icon}}.png" align="middle" height="25" width="25">  
+
+        <span class="title" style="padding:10px"> {{title}} </span>
     
         <div class="secondary-content">
-            <i class="material-icons">keyboard_arrow_down</i>
+            <i class="material-icons" align="right">keyboard_arrow_down</i>
         </div>
       </div>
 
@@ -149,6 +155,8 @@
   -->
   
   <!--when you hit the bottom of the page, allow room for last item-->
+  <br>
+  <br>
   <br>
   <br>
   

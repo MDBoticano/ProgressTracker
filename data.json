@@ -45,7 +45,7 @@
       "Jogging": [6],
       "Cardio":[6],
       "Strength":[8],
-      "Work":[11],
+      "Work":[1, 11],
       "Math":[12]
   },
   "popularTags": [
@@ -56,7 +56,7 @@
   "featuredTasks": [
     {     
       "id": 1,
-      "icon": "",
+      "icon": "work",
       "title": "COMPANY PRODUCT TM",
       "description": "Sponsored task for monetization",
       "checkpoints": [
@@ -65,6 +65,7 @@
         { "checkpoint": "Spend Money"}
       ],
       "tags": [
+        { "tag": "Work"},
         { "tag": "$$$"},
         { "tag": "Money"}
       ],
@@ -72,7 +73,7 @@
     },
     {     
       "id": 2,
-      "icon": "",
+      "icon": "homework",
       "title": "COGS 120 Assignment 1",
       "description": "Conduct needfinding interviews",
       "checkpoints": [
@@ -88,7 +89,7 @@
     },    
     {
       "id": 3,
-      "icon": "",
+      "icon": "homework",
       "title": "COGS 120 Assignment 2",
       "description": "Storyboard and paper prototype",
       "checkpoints": [
@@ -104,7 +105,7 @@
     },    
     {
       "id": 4,
-      "icon": "",    
+      "icon": "homework",    
       "title": "COGS 120 Assignment 3",
       "description": "Heuristic Evaluations",
       "checkpoints": [
@@ -121,7 +122,7 @@
     },    
     {
       "id": 5,
-      "icon": "",
+      "icon": "cooking",
       "title": "Cook Rice",
       "description": "A necessary meal",
       "checkpoints": [
@@ -138,7 +139,7 @@
     },
     {
       "id": 6,
-      "icon": "",
+      "icon": "fitness",
       "title": "One Mile Run",
       "description": "Travel a mile by walking, running, jogging or however you like.",
       "checkpoints": [
@@ -157,7 +158,7 @@
     },  
     {
       "id": 7,
-      "icon": "",
+      "icon": "study",
       "title": "COGS 120 Midterm",
       "description": "Study guide",
       "checkpoints": [
@@ -175,7 +176,7 @@
     },
     {
       "id": 8,
-      "icon": "",
+      "icon": "fitness",
       "title": "Push Up and Sit Ups",
       "description": "Daily push up and sit up workout",
       "checkpoints": [
@@ -194,7 +195,7 @@
     },
     {
       "id": 9,
-      "icon": "",
+      "icon": "study",
       "title": "SAT Practice",
       "description": "Get yourself ready for the SAT",
       "checkpoints": [
@@ -211,7 +212,7 @@
     },
     {
       "id": 10,
-      "icon": "",
+      "icon": "math",
       "title": "Math 20 Homework",
       "description": "Checkpoints for Math 20 Homework",
       "checkpoints": [
@@ -228,7 +229,7 @@
     },      
     {
     "id": 11,
-    "icon": "",
+    "icon": "work",
     "title": "Write Resume",
     "description": "Resume layout to success",
     "checkpoints": [
@@ -248,7 +249,7 @@
     },
     {
     "id": 12,
-    "icon": "",
+    "icon": "math",
     "title": "Math Worksheet",
     "description": "Do math homework",
     "checkpoints": [
