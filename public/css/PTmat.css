@@ -41,7 +41,7 @@ body {
 }
 
 :required {
-  background: red;
+  background-color: red;
 }
 
 /* Makes the active checkpoint glow, modified from Hummad Arslan Aslam - 
