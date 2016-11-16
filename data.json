@@ -1,4 +1,11 @@
 {
+  "currentUser": {
+    "firstName": "FirstName",
+    "lastName": "LastName",
+    "email": "email",
+    "username": "username",
+    "password": "password"
+  },
   "location": "UC San Diego",
   "navLinks": [
     { "link": "/",

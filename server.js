@@ -15,6 +15,8 @@ var viewDetails = require('./routes/viewDetails');
 // Adding to form code
 var trackerEditor = require('./routes/trackerEditor');
 var add = require('./routes/add');
+// Signing Up
+var submitSignUp = require('./routes/submitSignUp');
 
 var app = express();
 
@@ -35,6 +37,8 @@ app.get('/viewDetails/:id', viewDetails.generate);
 app.get('/trackerEditor', trackerEditor.view);
 app.get('/add', add.addFriend);
 //app.get('/add', trackerEditor.view);
+
+app.get('/submitSignUp', submitSignUp.signUp);
 
 
 app.engine('handlebars', handlebars());
