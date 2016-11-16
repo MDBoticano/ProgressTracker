@@ -40,7 +40,9 @@ body {
 	background-color: #f3f3f3;
 }
 
-
+:required {
+  background-color: red;
+}
 
 /* Makes the active checkpoint glow, modified from Hummad Arslan Aslam - 
    https://codepen.io/arximughal/pen/LEpoOJ */
