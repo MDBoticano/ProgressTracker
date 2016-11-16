@@ -28,23 +28,25 @@
     "Push Up and Sit Ups": 8,
     "SAT Practice": 9,
     "Math 20 Homework": 10,
-    "Write Resume": 11
+    "Write Resume": 11,
+    "Math Worksheet": 12
   },
   "tagURLtoID": {
       "Cooking":[5],
       "Money": [1, 11],
       "Food": [5],
       "$$$": [1, 11],
-      "Homework": [2, 3, 4, 7, 10],
+      "Homework": [2, 3, 4, 7, 10, 12],
       "COGS 120": [2, 3, 4, 7],
-      "Study": [7, 9, 10],
+      "Study": [7, 9, 10, 12],
       "Tests": [7, 9],
       "Fitness": [6, 8],
       "Running": [6],
       "Jogging": [6],
       "Cardio":[6],
       "Strength":[8],
-      "Work":[11]
+      "Work":[11],
+      "Math":[12]
   },
   "popularTags": [
     "Homework",
@@ -243,8 +245,25 @@
       { "tag": "$$$"}
     ],
     "time": ""
+    },
+    {
+    "id": 12,
+    "icon": "",
+    "title": "Math Worksheet",
+    "description": "Do math homework",
+    "checkpoints": [
+      { "checkpoint": "Addition problems"},
+      { "checkpoint": "Subtraction problems"},
+      { "checkpoint": "Multiplication problems"},
+      { "checkpoint": "Division problems"}
+    ],
+    "tags": [
+      { "tag": "Math"},
+      { "tag": "Homework"},
+      { "tag": "Study"}
+    ],
+    "time": ""
     }
-    
 
   ]
 }

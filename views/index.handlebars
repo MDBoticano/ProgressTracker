@@ -76,41 +76,45 @@
     {{#each featuredTasks}}
     <li >
       <div class="collapsible-header">   
-      <!--<i class="material-icons circle">{{icon}}</i>-->
-          <span class="title">{{title}}
-          
-          </span>
+      <i class="material-icons circle">error</i>
+        <span class="title">{{title}} </span>
     
-      
+        <div class="secondary-content">
+            <i class="material-icons">keyboard_arrow_down</i>
+        </div>
       </div>
+
+
       <div class="collapsible-body">
   
       <!-- checkpoint list -->      
       <div class="row">
         <div class="col s12">
             
-          <p>{{description}}</p>
+          <br>  
+          <h6>{{description}}</h6>
+          Checkpoints:
+          <br>
+          <br>
           <ul class="collection " id="checkpoints">
+
           {{#each checkpoints}}  
             <li class="collection-item" id="item_{{@index}}">{{checkpoint}}</li>
           {{/each}}
           </ul>
+
           <br>
+
           {{#each tags}}
           <a href="/tag/{{tag}}">
             <div class="chip">{{tag}}</div>
           </a>
           {{/each}}
             
-                <a href="/trackerCreator/{{title}}" class="secondary-content">
-          
-        <i class="material-icons">add</i>
-      </a>
+          <a href="trackerCreator/{{title}}" class="btn waves-effect waves-light secondary-content" type="submit" name="action">Start</a>
             
-        </div>      
+      </div>      
           
-        
-        
       </div>  
       </div>
     </li>
@@ -120,11 +124,12 @@
        
 
  <!--activities list (old) -->
+ <!--
   <ul class="collection collapsible featTasks" data-collapsible="accordion">
     <li class="collection-item"><p class="center-align">All Active Tasks</p></li>
     {{#each featuredTasks}}
     <li class="collection-item avatar featTasks">
-      <!--<i class="material-icons circle">{{icon}}</i>-->
+      <!--<i class="material-icons circle">{{icon}}</i>
       <span class="title">{{title}}</span>
       <br>
       <p class="featDesc">{{description}}</p>
@@ -141,12 +146,13 @@
     </li>
     {{/each}}
   </ul>
+  -->
   
   <!--when you hit the bottom of the page, allow room for last item-->
   <br>
   <br>
-  <br>
-  <br>
+  
+  
   
   <!--floating action button, leads to blank tracker creator  -->
   <div class="fixed-action-btn" style="bottom: 24px; right: 24px;">
