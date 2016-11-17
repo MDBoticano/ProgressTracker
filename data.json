@@ -13,7 +13,7 @@
     { "link": "/profilePage",
       "linkText": "Profile"},
     { "link": "/trackerEditor",
-      "linkText": "Tracker"},
+      "linkText": "Create Tracker"},
     { "link": "/login",
       "linkText": "Log Out"}    
   ],
