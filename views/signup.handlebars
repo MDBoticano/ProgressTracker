@@ -29,7 +29,7 @@
   <nav class="teal"> <!--change navbar background color here!-->
     <div class="nav-wrapper">
       <a href="/login" class="brand-logo">Progress Tracker</a>
-      <!--<a href="#" data-activates="mobile-demo" class="button-collapse">
+      <!--<a href="#" data-activates="mobile-demo" class="button-collapse" style="padding-left: 5px">
         <i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down"> 
         {{#each navLinks}}
@@ -66,42 +66,43 @@
     <form class="col s12" role="form" method="get" action="/submitSignUp">
      
       <div class="row">
-        <div class="input-field col s8 offset-s2">
+        <div class="input-field col s10 offset-s1">
           <input id="username" type="text" class="form-control" name="username">
           <label for="username">Username</label>
         </div>
       
-        <div class="input-field col s4 offset-s2">
+        <div class="input-field col s5 offset-s1">
           <input id="first_name" type="text" class="validate" name="first_name">
           <label for="first_name">First name</label>
         </div>
-        <div class="input-field col s4">
+        <div class="input-field col s5">
           <input id="last_name" type="text" class="validate" name="last_name">
           <label for="last_name">Last name</label>
         </div>
     
-        <div class="input-field col s8 offset-s2">
+        <div class="input-field col s10 offset-s1">
           <input id="email" type="email" class="validate" name="email">
           <label for="email">Email</label>
         </div>
   
-        <div class="input-field col s8 offset-s2">
+        <div class="input-field col s10 offset-s1">
           <input id="password" type="password" class="validate" name="password">
           <label for="password">Password</label>
         </div>
       
-        <div class="input-field col s8 offset-s2">
+        <div class="input-field col s10 offset-s1">
           <input id="password" type="password" class="validate">
           <label for="password">Confirm password</label>
         </div>
-      
+    
+
       <center>
       <div class="col s12">
         <!-- <a href="/submitSignUp" class="btn waves-effect waves-light" type="submit" name="action">  Sign Up
         <i class="material-icons right">send</i>
         </a> -->
         <input type="submit" id="signUpBtn" class="btn waves-effect waves-light" value="Sign Up"/>
-        <a href="/signup" class="btn waves-effect waves-light" type="submit" name="action">Reset
+        <a href="/signup" class="btn waves-effect waves-light orange darken-4" type="submit" name="action">Reset
         <i class="material-icons right">refresh</i>
           </a>
       </div>
