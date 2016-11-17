@@ -76,23 +76,25 @@
     {{#each featuredTasks}}
     <li >
       <div class="collapsible-header">   
-      <!--
-        <i class="material-icons circle">error</i>
-        <i class="material-icons circle">{{icon}}</i>
-      -->
         
-        <img src="images/{{icon}}.png" align="middle" height="25" width="25">  
+        <img src="images/{{icon}}.png" style="vertical-align: middle" height="25" width="25">  
 
-        <span class="title" style="padding:10px"> {{title}} </span>
+        <span class="title" style="padding:8px"> {{title}} </span>
     
+      <!--
         <div class="secondary-content">
             <i class="material-icons" align="right">keyboard_arrow_down</i>
         </div>
+        -->
+
+        <object class="material-icons secondary-content" style="vertical-align: middle" >keyboard_arrow_down
+          
+        </object>
+        
+
       </div>
 
-
       <div class="collapsible-body">
-  
       <!-- checkpoint list -->      
       <div class="row">
         <div class="col s12">
