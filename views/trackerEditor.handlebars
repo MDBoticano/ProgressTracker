@@ -49,20 +49,21 @@
     
     
     <!-- Body --> <!-- Form to fill out add -->
-    <div class="card">
-    <div class="card-content">
+    <div class="card row">
+    <div class="card-content col s12">
       <form id="addTaskForm" role="form" method="get" action="/add">
-        <h5 class = "center-align">Create your own task!</h5>
-        <div class="form-group"> <!-- Title -->
+        <h4 class = "center-align">Create your own task!</h4>
+        <div class="form-group col s10 offset-s1"> 
+          <!-- Title -->
           <!--<label for="title">Title</label>-->
-          <input type="text" class="form-control" id="title" placeholder="Title" name="title" required>
+          <input type="text" class="form-control " id="title" placeholder="Title" name="title" required>
         </div>
-        <div class="form-group"> <!-- Description -->
+        <div class="form-group col s10 offset-s1"> <!-- Description -->
           <!--<label for="description">Description</label>-->
           <input type="text" class="form-control" id="description" placeholder="Description" name="description">
         </div>
         
-        <div class="customCheckpoints">
+        <div class="customCheckpoints col s10 offset-s1">
         <div class="form-group">
           <!--<label for="cp1">Checkpoint 1</label>-->
           <input type="text" class="form-control" id="cp1" placeholder="Checkpoint 1" name="cp1" required>
@@ -83,11 +84,11 @@
         </div> <!-- Checkpoint add and remove -->
         <div class="center-align">
         <!-- add and remove checkpoints, hidden minimum of 1 checkpoint, max of 10 -->
-        <a class="waves-effect waves-light btn-flat" id="addCheckpoint">Add Checkpoint</a>  
-        <a class="waves-effect waves-light btn-flat" id="removeCheckpoint">Remove</a>  
+        <a class="waves-effect waves-light btn" id="addCheckpoint">Add Checkpoint</a>  
+        <a class="waves-effect waves-light btn orange darken-4" id="removeCheckpoint">Remove</a>  
         </div>
           
-        <div class="form-group">
+        <div class="form-group col s10 offset-s1">
           <!--<label for="tag1">Tag</label>-->
           <input type="text" class="form-control" id="tag1" placeholder="Tag" name="tag1">
         </div>
@@ -96,10 +97,12 @@
           <input type="text" class="form-control" id="tag2" placeholder="Tag 2" name="tag2">
         </div> -->
         
-        <div class="center-align">
+        <div class="center-align col s12">
         <input type="submit" id="submitBtn" class="btn waves-effect waves-light" value="Create and Start"/>
         <!--<a href = "/" class="btn">Cancel</a>-->
-        <a href="/trackerEditor" class="btn waves-effect waves-light" type="submit" name="action">Reset
+        <br>
+        <br>
+        <a href="/trackerEditor" class="btn waves-effect waves-light orange darken-4" type="submit" name="action">Reset
           <i class="material-icons right">refresh</i>
         </a>
         </div>
