@@ -146,7 +146,7 @@ function highlightCP(){
      if(i == max_cp){
       //timeTotal.toFixed(2); //2 decimal places
       var timeToConvert = (secondsTimeSpanToHMS(timeTotal));
-      var timeTotalString = '<center><li class="collection-item" id ="item_total">'+timeToConvert+'</li></center>';
+      var timeTotalString = '<center><li class="collection-item" id ="item_total">'+"Time Taken - " + timeToConvert+'</li></center>';
       $("#checkpoints").append(timeTotalString); 
       $(this).html("Home");
      }
