@@ -119,7 +119,7 @@ function highlightCP(){
         lastTime = curTime;
       }
       //console.log(timeDiff);
-      timeDiffSec = +((timeDiff/1000).toFixed(3)); //(convert ms to seconds)
+      timeDiffSec = +((timeDiff/1000).toFixed(2)); //(convert ms to seconds)
       console.log(timeDiffSec);
       
      //Changes "Start" text to "Checkpoint"    
@@ -144,8 +144,8 @@ function highlightCP(){
      }     
      //Change the text to hint at home & appends time total
      if(i == max_cp){
-      timeTotal = (timeTotal).toFixed(3); //3 decimal places
-      var timeToComplete = (secondsTimeSpanToHMS(timeTotal));
+      var timeTotalString = +(timeTotal).toFixed(2); //2 decimal places
+      var timeToComplete = (secondsTimeSpanToHMS(timeTotalString));
       var timeTotalString = '<center><li class="collection-item" id ="item_total">'+timeToComplete+'</li></center>';
       $("#checkpoints").append(timeTotalString); 
       $(this).html("Home");
