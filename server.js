@@ -22,6 +22,7 @@ var app = express();
 
 //Routes
 app.get('/',index.view);
+app.get('/home', index.view2);
 app.get('/profilePage', profilePage.view);
 app.get('/login', login.view);
 app.get('/trackerCreator', trackerCreator.view)
