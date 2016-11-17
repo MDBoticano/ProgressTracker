@@ -144,10 +144,9 @@ function highlightCP(){
      }     
      //Change the text to hint at home & appends time total
      if(i == max_cp){
-      var timeTotalString = +(timeTotal).toFixed(2); //2 decimal places
-      var timeToComplete = (secondsTimeSpanToHMS(timeTotalString));
-      timeToComplete = timeToComplete.toFixed(2);
-      var timeTotalString = '<center><li class="collection-item" id ="item_total">'+timeToComplete+'</li></center>';
+      //timeTotal.toFixed(2); //2 decimal places
+      var timeToConvert = (secondsTimeSpanToHMS(timeTotal));
+      var timeTotalString = '<center><li class="collection-item" id ="item_total">'+timeToConvert+'</li></center>';
       $("#checkpoints").append(timeTotalString); 
       $(this).html("Home");
      }
@@ -186,5 +185,6 @@ function secondsTimeSpanToHMS(s) {
     s -= h*3600;
     var m = Math.floor(s/60); //Get remaining minutes
     s -= m*60;
+    s = s.toFixed(2);
     return h+":"+(m < 10 ? '0'+m : m)+":"+(s < 10 ? '0'+s : s); //zero padding on minutes and seconds
 }
