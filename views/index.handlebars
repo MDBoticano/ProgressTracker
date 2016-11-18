@@ -66,20 +66,22 @@
           </a>
         {{/each}}
           
-          
-          {{#if showAlternate}}
-    <div class="card" id="altEditor">
-        <p>trackerditor</p>
-    </div>   
-  {{/if}}  
+
   
       </div>
     </div>
   </div>
     
   <!-- A/B testing card to tracker editor, edit inside the brackets -->    
+  {{#if showAlternate}}
+    <div class="card" id="altEditor">
+       <center>
+        <a class="btn waves-effect waves-light" href="/trackerEditor">
+            Create Your Own Tracker
+           </a></center>
+            </div>
 
-    
+  {{/if}}    
   
   
   <!--activities list (new, collapsibles) --> 
