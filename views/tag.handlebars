@@ -61,16 +61,12 @@
   <ul class="collapsible" data-collapsible="accordion">
     {{#each tagged}}
     <li >
-      <div class="collapsible-header" style="padding: .5rem 1rem">   
-        
+      <div class="collapsible-header" style="padding: .5rem 1rem">    
         <img src="/images/{{icon}}.png" style="vertical-align: middle" height="35" width="35">  
-
         <span class="title" style="padding:8px"> {{title}} </span>
-    
         <object class="material-icons secondary-content" style="padding-top:10px">keyboard_arrow_down</object>
 
       </div>
-
       <div class="collapsible-body">
         <!-- checkpoint list    -->
         <div class="row">
@@ -87,7 +83,6 @@
               <li class="collection-item" id="item_{{@index}}">{{checkpoint}}</li>
             {{/each}}
             </ul>
-
             <br>
 
             {{#each tags}}
@@ -96,10 +91,8 @@
             </a>
             {{/each}}
               
-            <a href="trackerCreator/{{title}}" class="btn waves-effect waves-light secondary-content" type="submit" name="action">Start</a>
-              
-        </div>      
-            
+            <a href="trackerCreator/{{title}}" class="btn waves-effect waves-light secondary-content" type="submit" name="action">Start</a>     
+        </div>           
         </div>  
       </div>
     </li>

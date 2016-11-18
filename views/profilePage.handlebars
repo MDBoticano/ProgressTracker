@@ -84,54 +84,64 @@
   </div>
 
 
-  <!-- Tracker history cards -->
-  <div>
-    <ul class="collection">
+    
+    <!--activities list (new, collapsibles) --> 
+  <ul class="collapsible" data-collapsible="accordion">
     {{#each featuredTasks}}
-      <li class="collection-item avatar">
-        <i class="material-icons circle">assignment_turned_in</i>
-          <span class="title">{{title}}</span>
+    <li >
+      <div class="collapsible-header" style="padding: .5rem 1rem">   
+        
+        <img src="/images/{{icon}}.png" style="vertical-align: middle" height="35" width="35">  
+
+        <span class="title" style="padding:8px"> {{title}} </span>
+    
+      <!--
+        <div class="secondary-content">
+            <i class="material-icons" align="right">keyboard_arrow_down</i>
+        </div>
+        -->
+
+
+        <object class="material-icons secondary-content" style="padding-top:10px">keyboard_arrow_down</object>
+
+      </div>
+
+      <div class="collapsible-body">
+      <!-- checkpoint list -->      
+      <div class="row">
+        <div class="col s12">
+            
+          <br>  
+          <h6>{{description}}</h6>
+          Checkpoints:
           <br>
-          <p>{{description}}</p>
+          <br>
+          <ul class="collection " id="checkpoints">
+
+          {{#each checkpoints}}  
+            <li class="collection-item" id="item_{{@index}}">{{checkpoint}}</li>
+          {{/each}}
+          </ul>
+
+          <br>
+
           {{#each tags}}
           <a href="/tag/{{tag}}">
             <div class="chip">{{tag}}</div>
           </a>
           {{/each}}
-        
-        
-      <a href="/viewDetails/{{title}}" class="secondary-content">
-        <i class="material-icons">keyboard_arrow_right</i>
-      </a>
-      
-
-
-      <!--
-      <div class="secondary-content">
-      
-        Dropdown Trigger 
-        <a class='dropdown-button' href='#' data-beloworigin="true" data-activates='dropdown1'>
-          <i class="material-icons">more_vert</i>
-        </a>
-
-        Dropdown Structure
-        <ul id='dropdown1' class='dropdown-content'>
-          <li><a href="/trackerCreator">View Details</a></li>
-          <li class="divider"></li>
-          <li><a href="/trackerCreator">Redo</a></li>
-          <li class="divider"></li>
-          <li><a href="/trackerCreator">Share</a></li>
-        </ul>
-
-      </div>
-
-      -->
+            
+          <a href="trackerCreator/{{title}}" class="btn waves-effect waves-light secondary-content" type="submit" name="action">Start</a>
+            
+      </div>      
           
-
-      </li>
+      </div>  
+      </div>
+    </li>
     {{/each}}
-    </ul>
-  </div>
+
+  </ul> 
+    
 
   <!--
   <br>
