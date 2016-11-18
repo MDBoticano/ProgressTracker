@@ -56,6 +56,7 @@ exports.addFriend = function(req, res) {
   
   var newTask = {
     "id": idVal,
+    "icon": "defaultIcon",
     "title": titleVal,
     "description": descVal,
     checkpoints,
