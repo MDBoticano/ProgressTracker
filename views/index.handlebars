@@ -65,17 +65,20 @@
           <div class="chip">{{this}}</div>
           </a>
         {{/each}}
+          
+          
+          {{#if showAlternate}}
+    <div class="card" id="altEditor">
+        <p>trackerditor</p>
+    </div>   
+  {{/if}}  
   
       </div>
     </div>
   </div>
     
-  <!-- A/B testing card to tracker editor, edit inside the {{}} -->    
-  {{#if showAlternate}}
-    <div class="card" id="altEditor">
-        <p>trackerditor</p>
-    </div>   
-  {{/if}}
+  <!-- A/B testing card to tracker editor, edit inside the brackets -->    
+
     
   
   
