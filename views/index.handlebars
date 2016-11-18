@@ -69,6 +69,14 @@
       </div>
     </div>
   </div>
+    
+  <!-- A/B testing card to tracker editor, edit inside the {{}} -->    
+  {{#if showAlternate}}
+    <div class="card" id="altEditor">
+        <p>trackerditor</p>
+    </div>   
+  {{/if}}
+    
   
   
   <!--activities list (new, collapsibles) --> 
@@ -161,13 +169,14 @@
   <br>
   
   
-  
+  {{#if showOriginal}}
   <!--floating action button, leads to blank tracker creator  -->
-  <div class="fixed-action-btn" style="bottom: 24px; right: 24px;">
+  <div id="origEdit" class="fixed-action-btn" style="bottom: 24px; right: 24px;">
     <a class="btn-floating btn-large orange darken-4" href="/trackerEditor">
       <i class="large material-icons">create</i>
     </a>
   </div>
+  {{/if}}
  
    
   <!-- Javascripts -->
