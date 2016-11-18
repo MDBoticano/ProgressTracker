@@ -53,35 +53,42 @@
     <div class="card-content col s12">
       <form id="addTaskForm" role="form" method="get" action="/add">
         <h4 class = "center-align">Create your own task!</h4>
+
         <div class="form-group col s10 offset-s1"> 
           <!-- Title -->
           <!--<label for="title">Title</label>-->
           <input type="text" class="form-control " id="title" placeholder="Title" name="title" required>
         </div>
+
         <div class="form-group col s10 offset-s1"> <!-- Description -->
           <!--<label for="description">Description</label>-->
           <input type="text" class="form-control" id="description" placeholder="Description" name="description">
         </div>
         
         <div class="customCheckpoints col s10 offset-s1">
-        <div class="form-group">
-          <!--<label for="cp1">Checkpoint 1</label>-->
-          <input type="text" class="form-control" id="cp1" placeholder="Checkpoint 1" name="cp1" required>
-        </div>
-        <div class="form-group">
-          <!--<label for="cp2">Checkpoint 2</label>-->
-          <input type="text" class="form-control" id="cp2" placeholder="Checkpoint 2" name="cp2">
-        </div>
-        <div class="form-group">
-          <!--<label for="cp3">Checkpoint 3</label>-->
-          <input type="text" class="form-control" id="cp3" placeholder="Checkpoint 3" name="cp3">
-        </div>
-        <div class="form-group">
-          <!--<label for="cp4">Checkpoint 4</label>-->
-          <input type="text" class="form-control" id="cp4" placeholder="Checkpoint 4" name="cp4">
-        </div>
+          <div class="form-group">
+            <!--<label for="cp1">Checkpoint 1</label>-->
+            <input type="text" class="form-control" id="cp1" placeholder="Checkpoint 1" name="cp1" required>
+          </div>
+
+          <div class="form-group">
+            <!--<label for="cp2">Checkpoint 2</label>-->
+            <input type="text" class="form-control" id="cp2" placeholder="Checkpoint 2" name="cp2">
+          </div>
+
+          <div class="form-group">
+            <!--<label for="cp3">Checkpoint 3</label>-->
+            <input type="text" class="form-control" id="cp3" placeholder="Checkpoint 3" name="cp3">
+          </div>
+          
+          <div class="form-group">
+            <!--<label for="cp4">Checkpoint 4</label>-->
+            <input type="text" class="form-control" id="cp4" placeholder="Checkpoint 4" name="cp4">
+          </div>
                   
-        </div> <!-- Checkpoint add and remove -->
+        </div> 
+
+        <!-- Checkpoint add and remove -->
         <div class="center-align">
         <!-- add and remove checkpoints, hidden minimum of 1 checkpoint, max of 10 -->
         <a class="waves-effect waves-light btn" id="addCheckpoint">Add Checkpoint</a>  

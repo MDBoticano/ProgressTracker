@@ -2,27 +2,26 @@
 
 <html>
 <head>
-    <title>Progress Tracker</title>	
+  <title>Progress Tracker</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-    <!--<link href="css/bootstrap.min.css" rel="stylesheet"> -->
+  <!--<link href="css/bootstrap.min.css" rel="stylesheet"> -->
 	<!--<link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
-    <!-- Materialize Template stuff (Material Design) coding thing-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
-    <!--our css-->  
-  
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->        
+  <!-- Materialize Template stuff (Material Design) coding thing-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+  <!--our css-->  
+   <link rel="stylesheet" href="/css/PTmat.css"/>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->        
 </head>
 
 <body>
-
 
   <!--Materialize Navbar Code-->
   <div class="navbar-fixed">
@@ -47,33 +46,78 @@
   </nav>
   </div>  
   
+
   
-  <!--location-->
-
-  <!--<div class="col s12 m7">
-    <div class="card">
-      <div class="card-image">
-        <span class="card-title">Card Title</span>
-      </div>
-      <div class="card-content">
-        <h5 class="center-align">{{location}}</h5>
-        <a href="#!"><h6 class="center-align">Change Location</h6></a>
-      </div>
-
+  <!-- Tag Header -->
+  <div class ="card">
+    <div class="card-content center-align">
+      <h5>Tag: {{curTag}}</h5>
     </div>
-  </div> -->
+  </div>
+
+
+  <!--List of templates based on tag
+  
+  <ul class="collapsible" data-collapsible="accordion">
+    {{#each tagged}}
+    <li >
+      <div class="collapsible-header" style="padding: .5rem 1rem">   
+        
+        <img src="images/{{icon}}.png" style="vertical-align: middle" height="35" width="35">  
+
+        <span class="title" style="padding:8px"> {{title}} </span>
     
+        <object class="material-icons secondary-content" style="padding-top:10px">keyboard_arrow_down</object>
 
-
-  <!--activities list -->
-  <ul class="collection featTasks">
-      <!--Viewing tags for...-->
-      <li class="collection-item">
-      <div class="card-content center-align">
-        <p >Acitivities tagged: <h5>{{curTag}}</h5></p>
-          <!--<div class ="chip"></div>-->
       </div>
-      </li>
+
+      <div class="collapsible-body">
+        <!-- checkpoint list    
+        <div class="row">
+          <div class="col s12">
+              
+            <br>  
+            <h6>{{description}}</h6>
+            Checkpoints:
+            <br>
+            <br>
+            <ul class="collection " id="checkpoints">
+
+            {{#each checkpoints}}  
+              <li class="collection-item" id="item_{{@index}}">{{checkpoint}}</li>
+            {{/each}}
+            </ul>
+
+            <br>
+
+            {{#each tags}}
+            <a href="/tag/{{tag}}">
+              <div class="chip">{{tag}}</div>
+            </a>
+            {{/each}}
+              
+            <a href="trackerCreator/{{title}}" class="btn waves-effect waves-light secondary-content" type="submit" name="action">Start</a>
+              
+        </div>      
+            
+        </div>  
+      </div>
+    </li>
+    {{/each}}
+
+  </ul>
+  -->
+
+
+  
+
+
+
+
+
+  <!--tag list OLD-->
+  <ul class="collection featTasks">
+
     {{#each tagged}}
     <li class="collection-item avatar featTasks">
       <!--<i class="material-icons circle">{{icon}}</i>-->
@@ -81,9 +125,9 @@
       <br>
       <p class="featDesc">{{description}}</p>
       {{#each tags}}
-        <a href="/tag/{{tag}}">
-        <div class="chip">{{tag}}</div>
-        </a>
+      <a href="/tag/{{tag}}">
+      <div class="chip">{{tag}}</div>
+      </a>
       {{/each}}
       
       <a href="/trackerCreator/{{title}}" class="secondary-content">
@@ -91,7 +135,16 @@
       </a>
     </li>
     {{/each}}
+
   </ul>
+  
+
+  <!--floating action button, leads to blank tracker creator  -->
+  <div id="origEdit" class="fixed-action-btn" style="bottom: 24px; right: 24px;">
+    <a class="btn-floating btn-large orange darken-4" href="/trackerEditor">
+      <i class="large material-icons">create</i>
+    </a>
+  </div>
   
   <!--when you hit the bottom of the page, allow room for last item-->
   <br>
@@ -116,6 +169,6 @@
     ga('create', 'UA-87264919-1', 'auto');
     ga('send', 'pageview');
     </script>
-  </body>
+</body>
 
 </html>

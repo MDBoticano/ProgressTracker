@@ -53,33 +53,33 @@
   <br>
   <br>
 
+
   <div>
-
-
 
     <div class="row">
       <center>
         <h4>Log In</h4>
       </center>
+    </div>
 
-
-    <form class="col s12">
+    <form id="SignIn" class="col s12" role="form" method="get">
 
       <div class="row">
         <div class="input-field col s10 offset-s1">
-          <input id="username" type="text" class="validate">
+          <input id="username" type="text" class="form-control" name="username" required>
           <label for="username">Username</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s10 offset-s1">
-          <input id="password" type="password" class="validate">
+          <input id="password" type="password" class="form-control" name="password" required>
           <label for="password">Password</label>
         </div>
       </div>
 
-      <!--<div class="row">
+      <!--
+      <div class="row">
         <center>
           <a href="/"><font size="2">Forgot username?</font></a>
           |
@@ -87,63 +87,75 @@
         </center>
       </div> -->
 
-    </form>
-    </div>
+      <div>
+        <center>
+          <a href="/" class="btn waves-effect waves-light" type="submit" name="action">Log In
+          </a>
 
+          <br>
+          <br>
+          <br>
 
-    <div>
-
-    <!-- we can change the icons -->
-      <center>
-        <a href="/" class="btn waves-effect waves-light" type="submit" name="action">Log In
-        </a>
-
-        <br>
-        <br>
-        <br>
-
-        <a href="/signup" class="btn waves-effect waves-light orange darken-4" type="submit" name="action">Sign Up</a>
+          <a href="/signup" class="btn waves-effect waves-light orange darken-4" type="submit" name="action">Sign Up</a>
         
+        </center>
+      </div>
 
-        <!-- add another button if needed
-        <a href="/" class="btn waves-effect waves-light grey lighten-1" type="submit" >Cancel
-          <i class="material-icons right">cancel</i>
-        </a>
-        -->
-      </center>
-
-    </div>
-
+    </form>
   </div>
   
-  
-  
-  
 
 
-  
-  
-  <!--when you hit the bottom of the page, allow room for last item-->
-  <br>
-  <br>
-  <br>
-  <br>
-  
-  
-  
 
 
-  
-  
-  <!--when you hit the bottom of the page, allow room for last item-->
-  <br>
-  <br>
-  <br>
-  <br>
-  
-   
+<!-- Body --> <!-- Form to fill out add --
+    <div class="col s12">
+      <form id="addTaskForm" role="form" method="get" action="/add">
+        <h4 class = "center-align">Log In</h4>
+
+        <div class="form-group col s10 offset-s1"> 
+          <!-- Title -->
+          <!--<label for="title">Title</label>--
+          <input type="text" class="form-control " id="title" placeholder="Username" name="title" required>
+        </div>
+        
+         <div class="form-group col s10 offset-s1"> 
+          <!-- Title -->
+          <!--<label for="title">Title</label>--
+          <input type="text" class="form-control " id="title" placeholder="Password" name="title" required>
+        </div>
+
+        <br>
+        
+        <div class="center-align col s12">
+
+        
+        <input type="submit" id="LogInBtn" class="btn waves-effect waves-light" value="Log In"/>
+        
+
+        
+
+        
+        <br>
+        <br>
+
+        <a href="/signup" class="btn waves-effect waves-light orange darken-4" type="submit" name="action">Sign Up
+        </a>
+
+        </div>
+      </form>
+      </div>
+      -->
+    
+
+
+
+
+
+
   <!-- Javascripts -->
   <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <!--<script src="js/bootstrap.min.js"></script> -->
   <!-- Materialize js-->
   <script type="text/javascript" src="/js/materialize.min.js"></script>
