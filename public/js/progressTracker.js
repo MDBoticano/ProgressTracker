@@ -50,7 +50,7 @@ function initializePage() {
   ga('send','event','A-FAB','click');
   });
                        
-  $("#altEditor").click(function (e){
+  $("#gaBtn").click(function (e){
     console.log("clicked");
     ga('send','event','B-Card','click');
   });
