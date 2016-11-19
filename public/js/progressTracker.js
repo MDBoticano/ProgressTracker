@@ -46,16 +46,14 @@ function initializePage() {
   
   //A/B Testing Events
   $("#origEdit").click(function (e){
-  e.preventDefault();
   console.log("clicked");
   ga('send','event','A-FAB','click');
-  }
+  });
                        
   $("#altEditor").click(function (e){
-    e.preventDefault();
     console.log("clicked");
     ga('send','event','B-Card','click');
-  }
+  });
       
 }
 
