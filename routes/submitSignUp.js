@@ -20,5 +20,5 @@ exports.signUp = function(req, res){
   console.log(data.currentUser);
     
 	//res.render('signup',data);
-    res.redirect("/profilePage");
+    res.redirect("/");
 };
