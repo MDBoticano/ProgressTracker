@@ -64,11 +64,18 @@ exports.addFriend = function(req, res) {
       { "tag": tag1Val}
       //{ "tag": tag2Val}
     ],
+    "isDone": true,
     "time": ""
   }
   
   //console.log(urlID);
   //console.log(newTask);
+  var customTasks = data.currentUser.tasksMade;
+  console.log(customTasks);
+  customTasks += 1;
+  data.currentUser["tasksMade"] = customTasks;
+  
+  
   
   data.featuredTasks.push(newTask);
   data.taskURLtoID[titleVal] = idVal; //Updates taskURLtoID with new task

@@ -4,7 +4,8 @@
     "lastName": "LastName",
     "email": "email",
     "username": "username",
-    "password": "password"
+    "password": "password",
+    "tasksMade": 0    
   },
   "location": "UC San Diego",
   "navLinks": [
@@ -69,6 +70,7 @@
         { "tag": "$$$"},
         { "tag": "Money"}
       ],
+      "isDone": "",
       "time": ""
     },
     {     
@@ -85,6 +87,7 @@
         { "tag": "Homework"},
         { "tag": "COGS 120"}
       ],
+      "isDone": false,
       "time": ""
     },    
     {
@@ -101,6 +104,7 @@
         { "tag": "Homework"},
         { "tag": "COGS 120"}
       ],
+      "isDone": false,
       "time": ""
     },    
     {
@@ -118,6 +122,7 @@
         { "tag": "Homework"},
         { "tag": "COGS 120"}
       ],
+      "isDone": false,
       "time": ""
     },    
     {
@@ -135,6 +140,7 @@
         { "tag": "Food"},
         { "tag": "Cooking"}
       ],
+      "isDone": false,
       "time": ""
     },
     {
@@ -172,6 +178,7 @@
         { "tag": "Homework"},
         { "tag": "COGS 120"}
       ],
+      "isDone": false,
       "time": ""
     },
     {
@@ -191,6 +198,7 @@
         { "tag": "Fitness"},
         { "tag": "Strength"}
       ],
+      "isDone": false,
       "time": ""
     },
     {
@@ -208,6 +216,7 @@
         { "tag": "Study"},
         { "tag": "Tests"}
       ],
+      "isDone": false,
       "time": ""
     },
     {
@@ -225,27 +234,29 @@
         { "tag": "Study"},
         { "tag": "Homework"}
       ],
+      "isDone": false,
       "time": ""
     },      
     {
-    "id": 11,
-    "icon": "work",
-    "title": "Write Resume",
-    "description": "Resume layout to success",
-    "checkpoints": [
-      { "checkpoint": "Basic personal information"},
-      { "checkpoint": "Professional Summary"},
-      { "checkpoint": "Highlights"},
-      { "checkpoint": "Experience"},
-      { "checkpoint": "Education"},
-      { "checkpoint": "Additional Information"}
-    ],
-    "tags": [
-      { "tag": "Work"},
-      { "tag": "Money"},
-      { "tag": "$$$"}
-    ],
-    "time": ""
+      "id": 11,
+      "icon": "work",
+      "title": "Write Resume",
+      "description": "Resume layout to success",
+      "checkpoints": [
+        { "checkpoint": "Basic personal information"},
+        { "checkpoint": "Professional Summary"},
+        { "checkpoint": "Highlights"},
+        { "checkpoint": "Experience"},
+        { "checkpoint": "Education"},
+        { "checkpoint": "Additional Information"}
+      ],
+      "tags": [
+        { "tag": "Work"},
+        { "tag": "Money"},
+        { "tag": "$$$"}
+      ],
+      "isDone": false,
+      "time": ""
     },
     {
     "id": 12,
@@ -263,6 +274,7 @@
       { "tag": "Homework"},
       { "tag": "Study"}
     ],
+    "isDone": false,
     "time": ""
     }
 
