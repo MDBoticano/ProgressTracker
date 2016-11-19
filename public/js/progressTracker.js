@@ -45,14 +45,14 @@ function initializePage() {
   $("#addTaskForm").submit(requireFields());
   
   //A/B Testing Events
-  $("#origEdit").click(function (e){
+  /*$("#origEdit").click(function (e){
   console.log("clicked");
   ga('send','event','A-FAB','click');
-  });
+  }); */
                        
   $("#gaBtn").click(function (e){
     console.log("clicked");
-    ga('send','event','B-Card','click');
+    ga('send','event','button','click');
   });
       
 }
