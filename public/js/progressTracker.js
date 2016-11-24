@@ -1,7 +1,7 @@
 //Global variables
 
 // -- for tracker creator checkpoint highlighting ------------------------
-var max_cp = $(".collection-item").length;
+var max_cp = $(".collection-item").length - 1;
 var i = 0;
 var x = i-1;
 var selector = "#item_"+ i;
@@ -182,11 +182,14 @@ function highlightCP(){
      //Change the text to hint at home & appends time total
      if(i == max_cp){
       pauseStopwatch();
-      //timeTotal.toFixed(2); //2 decimal places
       var timeToConvert = (secondsTimeSpanToHMS(timeTotal));
-      var timeTotalString = '<center><li class="collection-item" id ="item_total">'+"Time Taken - " + timeToConvert+'</li></center>';
+      var timeTotalString = 
+          '<center><li class="collection-item" id ="item_total">' + 
+          '<div class="clock">' +timeToConvert+ '</div>' + "Final Time"          
+          '</li></center>';
       $("#checkpoints").append(timeTotalString); 
       $(this).html("Home");
+      $("#timer").hide();
      }
      //Changes highlighting
      if(i <= max_cp+1){
