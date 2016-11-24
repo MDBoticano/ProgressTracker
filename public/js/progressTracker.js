@@ -8,11 +8,16 @@ var selector = "#item_"+ i;
 var done = "#item_"+ x;   
 var timeTotal = 0;
 
-
 //For custom checkpoints
 var numCheckpoints = $(".customCheckpoints .form-control").length;
 var customCPmax = 10;
 var customCPmin = 1;
+
+// Stopwatch by Jon Thorton
+var stopwatchInterval = 0;      // The interval for our loop.
+
+var stopwatchClock = $(".container.stopwatch").find(".clock"),
+    stopwatchDigits = stopwatchClock.find('span');
 
 
 $(document).ready(function(){  
@@ -136,6 +141,9 @@ function highlightCP(){
      //Changes "Start" text to "Checkpoint"    
      if(i == 0){
        $(this).html("Checkpoint");
+       if(stopwatchClock.hasClass('inactive')){
+        startStopwatch();
+       }
      }
      //Change the text when apporaching the final checkpoint
      if(i == max_cp-1){
@@ -155,6 +163,7 @@ function highlightCP(){
      }     
      //Change the text to hint at home & appends time total
      if(i == max_cp){
+      pauseStopwatch();
       //timeTotal.toFixed(2); //2 decimal places
       var timeToConvert = (secondsTimeSpanToHMS(timeTotal));
       var timeTotalString = '<center><li class="collection-item" id ="item_total">'+"Time Taken - " + timeToConvert+'</li></center>';
@@ -199,3 +208,83 @@ function secondsTimeSpanToHMS(s) {
     s = s.toFixed(2);
     return h+":"+(m < 10 ? '0'+m : m)+":"+(s < 10 ? '0'+s : s); //zero padding on minutes and seconds
 }
+
+
+// ------ BEGIN JON THORTON CODE ------ //
+
+
+
+
+
+function startStopwatch(){
+    // Prevent multiple intervals going on at the same time.
+    clearInterval(stopwatchInterval);
+
+    var startTimestamp = new Date().getTime(),
+        runningTime = 0;
+
+    localStorage.stopwatchBeginingTimestamp = startTimestamp;
+
+    // The app remembers for how long the previous session was running.
+    if(Number(localStorage.stopwatchRunningTime)){
+        runningTime = Number(localStorage.stopwatchRunningTime);
+    }
+    else{
+        localStorage.stopwatchRunningTime = 1;
+    }
+
+    // Every 100ms recalculate the running time, the formula is:
+    // time = now - when you last started the clock + the previous running time
+
+    stopwatchInterval = setInterval(function () {
+        var stopwatchTime = (new Date().getTime() - startTimestamp + runningTime);
+
+        stopwatchDigits.text(returnFormattedToMilliseconds(stopwatchTime));
+    }, 100);
+
+    stopwatchClock.removeClass('inactive');
+}
+
+function pauseStopwatch(){
+    // Stop the interval.
+    clearInterval(stopwatchInterval);
+
+    if(Number(localStorage.stopwatchBeginingTimestamp)){
+
+        // On pause recalculate the running time.
+        // new running time = previous running time + now - the last time we started the clock.
+        var runningTime = Number(localStorage.stopwatchRunningTime) + new Date().getTime() - Number(localStorage.stopwatchBeginingTimestamp);
+
+        localStorage.stopwatchBeginingTimestamp = 0;
+        localStorage.stopwatchRunningTime = runningTime;
+
+        stopwatchClock.addClass('inactive');
+    }
+}
+
+// Reset everything.
+function resetStopwatch(){
+    clearInterval(stopwatchInterval);
+
+    stopwatchDigits.text(returnFormattedToMilliseconds(0));
+    localStorage.stopwatchBeginingTimestamp = 0;
+    localStorage.stopwatchRunningTime = 0;
+
+    stopwatchClock.addClass('inactive');
+}
+
+
+function returnFormattedToMilliseconds(time){
+    var milliseconds = Math.floor((time % 1000) / 100),
+        seconds = Math.floor((time/1000) % 60),
+        minutes = Math.floor((time/(1000*60)) % 60),
+        hours = Math.floor((time/(1000*60*60)) % 24);
+
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+
+
+    return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
+}
+
+// ------ END JON THORTON CODE ------ //
