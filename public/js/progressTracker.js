@@ -185,8 +185,8 @@ function highlightCP(){
       var timeToConvert = (secondsTimeSpanToHMS(timeTotal));
       var timeTotalString = 
           '<center><li class="collection-item" id ="item_total">' + 
-          '<div class="clock">' +timeToConvert+ '</div>' + "Final Time"          
-          '</li></center>';
+          '<div class="clock">' +timeToConvert+ '</div>' + '<hr>' + '<h5>' +
+          "Total Time" + '</h5>' + '</li></center>';
       $("#checkpoints").append(timeTotalString); 
       $(this).html("Home");
       $("#timer").hide();
@@ -232,18 +232,11 @@ function secondsTimeSpanToHMS(s) {
 
 
 // ------ BEGIN JON THORTON CODE ------ //
-
-
-
-
-
 function startStopwatch(){
     // Prevent multiple intervals going on at the same time.
     clearInterval(stopwatchInterval);
-
     var startTimestamp = new Date().getTime(),
         runningTime = 0;
-
     localStorage.stopwatchBeginingTimestamp = startTimestamp;
 
     // The app remembers for how long the previous session was running.
@@ -256,7 +249,6 @@ function startStopwatch(){
 
     // Every 100ms recalculate the running time, the formula is:
     // time = now - when you last started the clock + the previous running time
-
     stopwatchInterval = setInterval(function () {
         var stopwatchTime = (new Date().getTime() - startTimestamp + runningTime);
 
@@ -269,9 +261,7 @@ function startStopwatch(){
 function pauseStopwatch(){
     // Stop the interval.
     clearInterval(stopwatchInterval);
-
     if(Number(localStorage.stopwatchBeginingTimestamp)){
-
         // On pause recalculate the running time.
         // new running time = previous running time + now - the last time we started the clock.
         var runningTime = Number(localStorage.stopwatchRunningTime) + new Date().getTime() - Number(localStorage.stopwatchBeginingTimestamp);
@@ -307,5 +297,4 @@ function returnFormattedToMilliseconds(time){
 
     return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
 }
-
 // ------ END JON THORTON CODE ------ //

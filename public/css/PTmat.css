@@ -1,25 +1,20 @@
-/*.collection .CPactive {
-    color: black; 
-    background-color: #f7ffb8; 
-} */
-
 :root{
     --cpcolor2: #f7ffb8;
     --cpcolor3: #fbffdb;
     --cpcolor1: #fbffdb;
-    --clockTextColor: #ffbbff;
+    --clockTextColor: teal;
 }
 
 /* Jon Thorton Stopwatch CSS */
 .clock {
 	position: relative;
-	/*height: 300px;
-	max-width: 700px;*/
+	/*height: 300px;*/
+	max-width: 700px;
 	width: 100%;
 	display: block;
 	margin: 20px auto;
 
-	font-size: 5em;
+	font-size: 3em;
 	color: var(--clockTextColor);
 	text-align: center;
 	/*line-height: 300px;*/
@@ -34,13 +29,7 @@
 	color: #9e9e9e;
 }
 
-.clock .overlay{
-	position: absolute;
-	top:0;
-	left:0;
-	width: 100%;
-	height: 100%;
-}
+
 /* End John Thorton */
 
 
