@@ -14,10 +14,28 @@ var customCPmax = 10;
 var customCPmin = 1;
 
 // Stopwatch by Jon Thorton
-var stopwatchInterval = 0;      // The interval for our loop.
+var stopwatchInterval = 0; 
 
 var stopwatchClock = $(".container.stopwatch").find(".clock"),
     stopwatchDigits = stopwatchClock.find('span');
+
+if(Number(localStorage.stopwatchBeginingTimestamp) && Number(localStorage.stopwatchRunningTime)){
+
+    var runningTime = Number(localStorage.stopwatchRunningTime) + new Date().getTime() - Number(localStorage.stopwatchBeginingTimestamp);
+
+    localStorage.stopwatchRunningTime = runningTime;
+
+    startStopwatch();
+}
+
+
+if(localStorage.stopwatchRunningTime){
+    stopwatchDigits.text(returnFormattedToMilliseconds(Number(localStorage.stopwatchRunningTime)));
+}
+else{
+    localStorage.stopwatchRunningTime = 0;
+}
+// --- END Stopwatch --- //
 
 
 $(document).ready(function(){  
@@ -49,17 +67,16 @@ function initializePage() {
   
   $("#addTaskForm").submit(requireFields());
   
-  //A/B Testing Events
-  /*$("#origEdit").click(function (e){
-  console.log("clicked");
-  ga('send','event','A-FAB','click');
-  }); */
-                       
+  resetStopwatch();
+  
+  //A/B Testing Events                   
   $("#gaBtn").click(function (e){
     console.log("clicked");
     ga('send','event','button','click');
   });
       
+  
+  
 }
 
 // manual redirect, works for other buttons but not input type submit
@@ -152,7 +169,8 @@ function highlightCP(){
 
      //Set the link so it goes home; change this to link to statistics or profile page etc.
      if(i == max_cp+1){
-      $(this).attr("href", "/"); 
+      $(this).attr("href", "/");
+       resetStopwatch();
      }
      // Keep track of total time
      if(i > 0 && i <= max_cp+1) {
