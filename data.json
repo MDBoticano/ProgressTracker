@@ -1,4 +1,5 @@
 {
+  "AppTitle": "Asdasda",
   "currentUser": {
     "firstName": "FirstName",
     "lastName": "LastName",
@@ -12,7 +13,7 @@
     { "link": "/",
       "linkText": "Home"},
     { "link": "/profilePage",
-      "linkText": "Profile"},
+      "linkText": "My Tasks"},
     { "link": "/trackerEditor",
       "linkText": "Create Tracker"},
     { "link": "/login",
